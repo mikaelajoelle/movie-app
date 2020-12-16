@@ -1,0 +1,134 @@
+// Main
+
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+
+main {
+    
+    // banner
+
+    .banner{
+        display: none;
+    } 
+
+   section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 2em;
+        padding: 5vw;
+   }
+  
+
+    @media (min-width: 670px){
+        
+        section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 2em;
+            padding: 5vw;
+        }
+
+        article {
+            
+            margin-bottom: 0;
+        }
+
+        .banner{
+            display: block;
+        }
+
+        .banner img{
+            filter: brightness(30%);
+            height: 85vh;
+        }
+    
+        img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            filter: brightness(85%);
+        }
+    
+        .text-overlay{
+            position: relative;
+            bottom: 55%;
+            left: 38%;
+            border-radius: 28%;
+            width: 85px;
+            line-height: 120px;
+            height: 70px;
+            text-align: center;
+            font-size: 40px;
+            border: 1px solid rgb(161, 161, 161);
+    
+            p{
+                color: rgb(161, 161, 161);
+            }
+        }
+    
+        #rating-overlay{
+            position: absolute;
+            top: 51%;
+            left: 80%;
+        }
+    
+        .movie-info-overlay{
+            position: absolute;
+            top: 44%;
+            left: 12%;
+    
+    
+            h2{
+            font-size: 55px;
+            text-transform: uppercase;
+            color: white;
+            margin-bottom: 0;
+            }
+    
+            h3{
+                color: white;
+                letter-spacing: 1px;
+                font-size: 18px;
+            }
+    
+            p{
+                color: rgb(161, 161, 161);
+                width: 405px;
+                line-height: 25px;
+            }
+        }
+    
+       .banner-button{
+           background-color: #ff0267;
+           border-radius: 18px;
+           padding: 15px;
+           width: 125px;
+           outline: none;
+           border: none;
+           color: white;
+           position: relative;
+           right: 40px;
+           font-family: $bodyFont;
+       }
+
+    }
+
+    @media (min-width: 1000px){
+        
+        section {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+
+    @media (min-width: 1400px){
+            
+        section {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+
+}

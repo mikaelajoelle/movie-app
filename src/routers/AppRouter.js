@@ -1,5 +1,7 @@
 // App Router
 
+/*
+
 function AppRouter() {
   return (
     <div className="App">
@@ -9,3 +11,5 @@ function AppRouter() {
 }
 
 export default AppRouter;
+
+*/

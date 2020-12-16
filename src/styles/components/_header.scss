@@ -1,0 +1,41 @@
+// Header
+
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+@use '../utilities/mixins' as *;
+
+header {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        @include flatten;
+        margin: 0 0 0 em(12, 32);
+        line-height: 70px;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    img{
+        width: 198px;
+        height: auto;
+        margin: 15px 25px;
+    }
+}
+
+@media (min-width: 670px){
+
+    header{
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    }
+}
