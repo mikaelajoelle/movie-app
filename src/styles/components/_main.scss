@@ -5,7 +5,7 @@
 
 main {
     
-    // banner
+    // Banner
 
     .banner{
         display: none;
@@ -18,7 +18,52 @@ main {
         grid-gap: 2em;
         padding: 5vw;
    }
+
+   // Search Bar
+
+   .search-bar{
+       margin-top: 17px;
+       width: 160px;
+       display: none;
+
+       input{
+        background-color: rgb(43, 42, 42);
+        color: rgb(161, 161, 161);
+        outline: none;
+        border: none;
+        border-radius: 15px;
+        padding: 10px;
+        width: 160px;
+       }
+   }
   
+   // Filter Buttons
+
+   .top-bar{
+       padding: 4vw 4vw 0vw 4vw;
+       display: flex;
+       justify-content: space-between;
+   }
+
+   .filter-button{
+    background-color: transparent;
+    border-radius: 18px;
+    padding: 15px;
+    width: 125px;
+    outline: none;
+    border: 1px solid rgba(161, 161, 161, 0.379);
+    color: rgb(161, 161, 161);
+    margin: 10px;
+    font-family: $bodyFont;
+   }
+
+    .filter-button:hover, .filter-button:active{
+        background-color: #ff0267;
+        border: 1px solid #ff0267;
+        color: white;
+    }
+   
+
 
     @media (min-width: 670px){
         
@@ -55,13 +100,13 @@ main {
             position: relative;
             bottom: 55%;
             left: 38%;
-            border-radius: 28%;
+            border-radius: 20%;
             width: 85px;
             line-height: 120px;
             height: 70px;
             text-align: center;
             font-size: 40px;
-            border: 1px solid rgb(161, 161, 161);
+            border: 1px solid rgba(161, 161, 161, 0.379);
     
             p{
                 color: rgb(161, 161, 161);
@@ -113,13 +158,30 @@ main {
            font-family: $bodyFont;
        }
 
+      
     }
 
+    
     @media (min-width: 1000px){
         
         section {
             grid-template-columns: repeat(3, 1fr);
         }
+
+        .search-bar{
+            width: 320px;
+            display: block;
+     
+                input{
+                background-color: rgb(43, 42, 42);
+                color: rgb(161, 161, 161);
+                outline: none;
+                border: none;
+                border-radius: 15px;
+                padding: 10px;
+                width: 320px;
+                }
+            }
     }
 
 

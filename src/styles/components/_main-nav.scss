@@ -22,14 +22,14 @@
     ul {
         @include flatten($is-list: true);
     }
-    a {
+    a.router-link {
         color: $light;
         text-decoration: none;
         display: block;
         line-height: 50px;
         font-size: 1.3em;
         font-weight: bold;
-        padding: 0 12px;
+        padding: 0 28px;
        
         &:hover,
         &:focus,
@@ -55,21 +55,17 @@
         ul {
             display: flex;
             justify-content: flex-end;
+            height: 110px;
         }
 
         
 
-        a {
+        a.router-link {
             
             text-align: center;
-            border-top:  none;
-            line-height: 100px;
+            line-height: 110px;
             width: 170px;
             
-            @at-root .main-nav li:not(:first-child) a {
-                border-top: none;
-                
-            }
         }
 
     }

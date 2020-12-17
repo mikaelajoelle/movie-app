@@ -1,0 +1,55 @@
+// Footer
+
+@use '../base/settings' as *;
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    padding: 6vw 15vw;
+    color: rgb(161, 161, 161);
+    font-family: $bodyFont;
+    background-color: rgba(32, 32, 32, 0.427);
+}
+
+.footer-logo{
+    width: 35%;
+    height: auto;
+    margin-left: 5vw;
+}
+
+.educational{
+    font-size: 12px;
+    margin: 0 auto;
+
+    p{
+        padding-bottom: 5px;
+        color: rgb(161, 161, 161);
+    }
+}
+
+ul{
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(161, 161, 161);
+    font-family: $bodyFont;
+    font-size: 12px;
+
+}
+
+.footer-link:hover, .help-link:hover{
+    border-bottom: 1px solid #ff0267;
+}
+
+
+li{
+    padding-bottom: 10px;
+}
+
+
+

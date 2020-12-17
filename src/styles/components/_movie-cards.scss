@@ -1,6 +1,34 @@
 @use '../base/settings' as *;
 
-.card {
+.card{
+  position: relative;
+}
+
+
+.card:hover .content{
+  transition: 0.2s ease-in;
+  opacity: 1;
+}
+
+.content{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  padding: 80px 20px;
+  transition: 0.2s ease-in;
+}
+
+
+.content a:hover .card .content{
+  opacity: 1;
+}
+
+
+ /* .card {
     position: relative;
     overflow: hidden;
 
@@ -8,59 +36,52 @@
 
   .card:hover{
       .content{
-          opacity: 1
+          opacity: 1;
       }
   }
+
+  */
+  
   .rating {
     position: absolute;
-    width: 50px;
-    height:40px;
-    top: 20px;
+    width: 48px;
+    height:38px;
+    top: 27px;
     right: 20px;
     pointer-events: none;
     border-radius: 20%;
-    border: 1px solid rgb(161, 161, 161);
+    border: 1px solid rgba(161, 161, 161, 0.379);
     background: transparent;
     text-align: center;
-    line-height: 40px;
+    line-height: 38px;
     font-size: 16px;
     }
 
-
+    
     .img-box{
     width: 100%;
     height: 100%;
     }
   
   
-   .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .content {
-    padding: 80px 20px;
-    background-color: black;
-    box-sizing: border-box;
-    z-index: 11;
-    pointer-events: none;
-    transition: 0.5s;
-    opacity: 0;
-  }
-  
-  
   .content h2 {
-    margin-bottom: 10px;
     color: rgb(161, 161, 161);
+    margin-top: 20px;
   }
 
   .content h4{
       margin-top: 18px;
       font-size: 10px;
       text-transform: uppercase;
+      font-size: 11px;
+      position: absolute;
+      top: 10px;
+  }
+
+  .content h5{
+    font-size: 11px;
+    position: absolute;
+    top: 30px;
   }
   
   .content p {
@@ -76,16 +97,27 @@
     padding: 15px;
     outline: none;
     border: none;
-    color: white;
     width: 125px;
     margin: 0 70px;
     margin-top: 40px;
     font-family: $bodyFont;
-}
+    
 
-p{
+    a{
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+
+  p{
     font-size: 0.8em;
     color:rgb(212, 211, 211);
     margin-bottom: 0;
     margin-top: 10px;
-}
+  }
+  
+
+
+
+
