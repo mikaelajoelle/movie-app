@@ -56,9 +56,9 @@ const Home = () => (
 
 
             <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/enola-holmes.jpg'} alt="enola holmes"/>
-                </div>
+               
+                <img class="img-box" src={process.env.PUBLIC_URL + '/enola-holmes.jpg'} alt="enola holmes"/>
+                
                 <div class="content">
                 
                     <h4>Action · Adventure</h4>
@@ -72,9 +72,9 @@ const Home = () => (
             
 
             <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/ava.jpg'} alt="ava"/>
-                </div>
+                
+                <img class="img-box" src={process.env.PUBLIC_URL + '/ava.jpg'} alt="ava"/>
+                
                 <div class="content">
                 
                     <h4>Action · Adventure</h4>
@@ -88,9 +88,9 @@ const Home = () => (
 
 
             <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/artemisfowl.jpg'} alt="atemis fowl"/>
-                </div>
+                
+                <img class="img-box" src={process.env.PUBLIC_URL + '/artemisfowl.jpg'} alt="atemis fowl"/>
+                
                 <div class="content">
 
                     <h4>Action · Adventure</h4>
@@ -104,9 +104,9 @@ const Home = () => (
 
             
             <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/2067.jpg'} alt="2067"/>
-                </div>
+                
+                <img class="img-box" src={process.env.PUBLIC_URL + '/2067.jpg'} alt="2067"/>
+                
                 <div class="content">
                 
                     <h4>Action · Adventure</h4>
@@ -120,9 +120,9 @@ const Home = () => (
             
 
             <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/beckman.jpg'} alt="beckman"/>
-                </div>
+                
+                <img class="img-box" src={process.env.PUBLIC_URL + '/beckman.jpg'} alt="beckman"/>
+                
                 <div class="content">
 
                     <h4>Action · Adventure</h4>
@@ -136,9 +136,9 @@ const Home = () => (
 
            
             <div class="card">
-                <div class="img-box">
-                 <img src={process.env.PUBLIC_URL + '/projectpower.jpg'} alt="project power"/>
-                </div>
+                
+                 <img class="img-box" src={process.env.PUBLIC_URL + '/projectpower.jpg'} alt="project power"/>
+                
                 <div class="content">
 
                     <h4>Action · Adventure</h4>
@@ -152,9 +152,9 @@ const Home = () => (
             
 
             <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/archive.jpg'} alt="archive"/>
-                </div>
+                
+                <img class="img-box" src={process.env.PUBLIC_URL + '/archive.jpg'} alt="archive"/>
+                
                 <div class="content">
                 
                     <h4>Action · Adventure</h4>
@@ -169,68 +169,68 @@ const Home = () => (
             
            
             <div class="card">
-                <div class="img-box">
-                    <img src={process.env.PUBLIC_URL + '/mulan.jpg'} alt="mulan"/>
-                </div>
-                <div class="content">
                 
-                    <h4>Action · Adventure</h4>
-                    <h5>Oct 25, 2020</h5>
-                    <h2>Mulan</h2>
-                    <div class="rating">7.4</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
-                    <button class="movie-button"><a href="#0">More Info</a></button>
-                </div>
-            </div>
+                <img class="img-box" src={process.env.PUBLIC_URL + '/mulan.jpg'} alt="mulan"/>
             
-
-
-            <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/enola-holmes.jpg'} alt="enola holmes"/>
-                </div>
-                <div class="content">
-                
-                    <h4>Action · Adventure</h4>
-                    <h5>Nov 18, 2020</h5>
-                    <h2>Enola Holmes</h2>
-                    <div class="rating">7.4</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
-                    <button class="movie-button"><a href="#0">More Info</a></button>
-                </div>
-            </div>
+            <div class="content">
             
-
-            <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/ava.jpg'} alt="ava"/>
-                </div>
-                <div class="content">
-                
-                    <h4>Action · Adventure</h4>
-                    <h5>Nov 22, 2020</h5>
-                    <h2>Ava</h2>
-                    <div class="rating">7.4</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
-                    <button class="movie-button"><a href="#0">More Info</a></button>
-                </div>
+                <h4>Action · Adventure</h4>
+                <h5>Jan 17, 2021</h5>
+                <h2>Mulan</h2>
+                <div class="rating">7.4</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
+                <button class="movie-button"><a href="#0">More Info</a></button>
             </div>
+        </div>
+        
 
 
-            <div class="card">
-                <div class="img-box">
-                <img src={process.env.PUBLIC_URL + '/artemisfowl.jpg'} alt="atemis fowl"/>
-                </div>
-                <div class="content">
-
-                    <h4>Action · Adventure</h4>
-                    <h5>Dec 12, 2020</h5>
-                    <h2>Artemis Fowl</h2>
-                    <div class="rating">7.4</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
-                    <button class="movie-button"><a href="#0">More Info</a></button>
-                </div>
+        <div class="card">
+           
+            <img class="img-box" src={process.env.PUBLIC_URL + '/enola-holmes.jpg'} alt="enola holmes"/>
+            
+            <div class="content">
+            
+                <h4>Action · Adventure</h4>
+                <h5>Jan 12, 2021</h5>
+                <h2>Enola Holmes</h2>
+                <div class="rating">7.4</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
+                <button class="movie-button"><a href="#0">More Info</a></button>
             </div>
+        </div>
+        
+
+        <div class="card">
+            
+            <img class="img-box" src={process.env.PUBLIC_URL + '/ava.jpg'} alt="ava"/>
+            
+            <div class="content">
+            
+                <h4>Action · Adventure</h4>
+                <h5>Jan 05, 2021</h5>
+                <h2>Ava</h2>
+                <div class="rating">7.4</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
+                <button class="movie-button"><a href="#0">More Info</a></button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            
+            <img class="img-box" src={process.env.PUBLIC_URL + '/artemisfowl.jpg'} alt="atemis fowl"/>
+            
+            <div class="content">
+
+                <h4>Action · Adventure</h4>
+                <h5>Dec 27, 2020</h5>
+                <h2>Artemis Fowl</h2>
+                <div class="rating">7.4</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
+                <button class="movie-button"><a href="#0">More Info</a></button>
+            </div>
+        </div>
 
           
             
