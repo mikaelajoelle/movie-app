@@ -55,7 +55,6 @@ const Home = () => (
                     <NavLink className="router-link" to={'/single-movie/:id'}>More Info</NavLink>
                     </button>
                     
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
                 </div>
             </div>
             
@@ -73,7 +72,7 @@ const Home = () => (
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                     <button class="movie-button"><a href="#0">More Info</a></button>
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                   
                 </div>
             </div>
             
@@ -90,7 +89,7 @@ const Home = () => (
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                     <button class="movie-button"><a href="#0">More Info</a></button>
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                    
                 </div>
             </div>
 
@@ -107,7 +106,7 @@ const Home = () => (
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                     <button class="movie-button"><a href="#0">More Info</a></button>
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                    
                 </div>
             </div>
 
@@ -124,7 +123,7 @@ const Home = () => (
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                     <button class="movie-button"><a href="#0">More Info</a></button>
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                    
                 </div>
             </div>
             
@@ -141,7 +140,7 @@ const Home = () => (
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                     <button class="movie-button"><a href="#0">More Info</a></button>
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                    
                 </div>
             </div>
 
@@ -158,7 +157,7 @@ const Home = () => (
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                     <button class="movie-button"><a href="#0">More Info</a></button>
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                   
                 </div>
             </div>
             
@@ -175,7 +174,7 @@ const Home = () => (
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                     <button class="movie-button"><a href="#0">More Info</a></button>
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                    
                 </div>
             </div>
 
@@ -193,7 +192,7 @@ const Home = () => (
                 <div class="rating">7.4</div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                 <button class="movie-button"><a href="#0">More Info</a></button>
-                <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+               
             </div>
         </div>
         
@@ -211,7 +210,7 @@ const Home = () => (
                 <div class="rating">7.4</div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                 <button class="movie-button"><a href="#0">More Info</a></button>
-                <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+               
             </div>
         </div>
         
@@ -228,7 +227,7 @@ const Home = () => (
                 <div class="rating">7.4</div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                 <button class="movie-button"><a href="#0">More Info</a></button>
-                <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                
             </div>
         </div>
 
@@ -245,7 +244,7 @@ const Home = () => (
                 <div class="rating">7.4</div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                 <button class="movie-button"><a href="#0">More Info</a></button>
-                <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
+                
             </div>
         </div>
 
