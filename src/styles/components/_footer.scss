@@ -4,18 +4,20 @@
 
 footer{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin: 0 auto;
     padding: 6vw 15vw;
     color: rgb(161, 161, 161);
     font-family: $bodyFont;
     background-color: rgba(32, 32, 32, 0.427);
+    text-align: center;
 }
 
 .footer-logo{
     width: 35%;
     height: auto;
-    margin-left: 5vw;
+    margin: 0 auto;
+    
 }
 
 .educational{
@@ -25,6 +27,7 @@ footer{
     p{
         padding-bottom: 5px;
         color: rgb(161, 161, 161);
+        margin-top: 4px;
     }
 }
 
@@ -51,5 +54,17 @@ li{
     padding-bottom: 10px;
 }
 
+@media (min-width: 670px){
+
+    footer{
+        grid-template-columns: repeat(4, 1fr);
+        text-align: left;
+    }
+
+    .footer-logo{
+        margin-left: 5vw;
+    }
+
+}
 
 

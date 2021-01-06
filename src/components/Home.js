@@ -1,5 +1,7 @@
 // Home
 
+import { NavLink } from 'react-router-dom';
+
 
 const Home = () => (
     <main>
@@ -36,7 +38,7 @@ const Home = () => (
 
         </div>
 
-        <section>
+        <section class="movie-cards">
            
             <div class="card">
                 
@@ -49,7 +51,10 @@ const Home = () => (
                     <h2>Mulan</h2>
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
-                    <button class="movie-button"><a href="#0">More Info</a></button>
+                    <button class="movie-button">
+                    <NavLink className="router-link" to={'/single-movie/:id'}>More Info</NavLink>
+                    </button>
+                    
                     <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-nofill.png'} alt="favourite icon no fill" />
                 </div>
             </div>

@@ -11,14 +11,47 @@ main {
         display: none;
     } 
     
+    // Home
 
-   section{
+   .movie-cards{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 1fr;
         grid-gap: 2em;
         padding: 5vw;
    }
+
+   // Favourites
+
+   .movie-cards-favourites{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 2em;
+    padding: 5vw;
+}
+
+   // About Page
+
+   .about-section{
+       padding: 10vw 10vw 8vw 10vw;
+       margin: 0 auto;
+   }
+
+   .tmdb-section{
+        margin: 0 auto;
+        padding: 0vw 10vw 10vw 10vw;
+   }
+
+   .tmdb-logo{
+       width: 50px;
+       margin-top: 20px;
+   }
+
+   // Single Page
+
+   
+
 
    // Search Bar
 
@@ -67,14 +100,37 @@ main {
 
 
     @media (min-width: 670px){
+
+        // Home
         
-        section {
+        .movie-cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 1fr;
             grid-gap: 2em;
             padding: 5vw;
         }
+
+        // Favourites
+
+        .movie-cards-favourites {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 2em;
+            padding: 10vw 5vw 5vw 5vw;
+        }
+
+        // about page
+
+        .about-section{
+            padding: 25vw 25vw 3vw 25vw;
+        }
+
+        .tmdb-section{
+            padding: 0vw 25vw 25vw 25vw;
+        }
+
 
         article {
             
@@ -164,8 +220,16 @@ main {
 
     
     @media (min-width: 1000px){
+
+        // Home
         
-        section {
+        .movie-cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+         // Favourites
+
+        .movie-cards-favourites {
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -187,8 +251,15 @@ main {
 
 
     @media (min-width: 1400px){
+
+        // Home
             
-        section {
+        .movie-cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        // Favourites
+        .movie-cards-favourites {
             grid-template-columns: repeat(4, 1fr);
         }
 
