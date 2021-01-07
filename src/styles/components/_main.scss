@@ -50,7 +50,57 @@ main {
 
    // Single Page
 
+
    
+
+   .single-movie-card{
+       margin: 50px 30px 70px 30px;
+       background-color: rgb(24, 24, 24);
+       padding: 30px;
+       border-radius: 20px;
+       position: relative;
+       display: grid;
+       grid-template-columns: 1fr;
+       grid-gap: 3em;
+
+       
+
+       .movie-button{
+           margin-left: 0;
+           background-color: transparent;
+           border: 1px solid rgba(161, 161, 161, 0.379);
+           width: 150px;
+       }
+
+       .movie-button:hover{
+            background-color: #ff0267;
+            border: 1px solid #ff0267;
+        }
+
+       .single-movie-rating{
+           position: absolute;
+           top: 3%;
+           left: 82%;
+           width: 48px;
+           height:38px;
+           pointer-events: none;
+           border-radius: 20%;
+           border: 1px solid rgba(161, 161, 161, 0.379);
+           background: transparent;
+           text-align: center;
+           line-height: 38px;
+           font-size: 16px;
+       }
+
+       .single-movie-info{
+           display: flex;
+
+           h5{
+               margin-right: 20px;
+               margin-top: 0;
+           }
+       }
+   }
 
 
    // Search Bar
@@ -96,10 +146,9 @@ main {
         border: 1px solid #ff0267;
         color: white;
     }
-   
 
 
-    @media (min-width: 670px){
+    @media (min-width: 720px){
 
         // Home
         
@@ -108,7 +157,7 @@ main {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 1fr;
             grid-gap: 2em;
-            padding: 5vw;
+            padding: 4vw 5vw 4vw 5vw;
         }
 
         // Favourites
@@ -119,6 +168,22 @@ main {
             grid-template-rows: 1fr;
             grid-gap: 2em;
             padding: 10vw 5vw 5vw 5vw;
+            margin-top: 35px;
+        }
+
+        // Single Page
+
+        .single-movie-card{
+            grid-template-columns: 340px 1fr;
+            width: 650px;
+            margin: 0 auto;
+            margin-top: 300px;
+            margin-bottom: 200px;
+
+            .single-movie-rating{
+                top: 7%;
+                left: 45%;
+            }
         }
 
         // about page
@@ -261,6 +326,7 @@ main {
         // Favourites
         .movie-cards-favourites {
             grid-template-columns: repeat(4, 1fr);
+            margin-top: 0;
         }
 
     }

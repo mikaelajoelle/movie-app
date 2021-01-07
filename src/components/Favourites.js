@@ -18,7 +18,7 @@ function Favourites() {
                     <div class="rating">7.4</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae soluta optio error totam. Consectetur sequi repellat odio facilis rem optio pariatur enim magnam qui...</p>
                     <button class="movie-button"><a href="#0">More Info</a></button>
-                    <img class="favourite-icon" src={process.env.PUBLIC_URL + '/favourite-icon-fill.png'} alt="favourite icon fill" />
+                    
                 </div>
             </div>
         </section>
