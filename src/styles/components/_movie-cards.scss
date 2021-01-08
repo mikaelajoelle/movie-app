@@ -50,7 +50,7 @@
     right: 20px;
     pointer-events: none;
     border-radius: 20%;
-    border: 1px solid rgba(161, 161, 161, 0.379);
+    border: 1px solid $borderColor;
     background: transparent;
     text-align: center;
     line-height: 38px;
@@ -65,7 +65,7 @@
   
   
   .content h2 {
-    color: rgb(161, 161, 161);
+    color: $grey;
     margin-top: 20px;
   }
 
@@ -87,19 +87,21 @@
   .content p {
     margin: 0;
     padding: 0;
-    color: rgb(161, 161, 161);
+    color: $grey;
     line-height: 20px;
   }
 
   .movie-button{
-    background-color: #ff0267;
+    background-color: $pink;
     border-radius: 18px;
     padding: 15px;
     outline: none;
     border: none;
     width: 125px;
-    margin: 0 70px;
-    margin-top: 40px;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translate(-50%, -50%);
     font-family: $bodyFont;
     
 

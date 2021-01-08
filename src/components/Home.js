@@ -21,15 +21,26 @@ const Home = () => (
         </div>
     </div>
 
+    <div class="dropdown-menu">
+            <label>Sort By:</label>
+            <select id="select-sort-by">
+                <option value="popular">Popular</option>
+                <option value="top-rated">Top Rated</option>
+                <option value="now-playing">Now Playing</option>
+                <option value="upcoming">Upcoming</option>
+            </select>
+        </div>
        
        <div class="top-bar">
 
         <div class="filter-buttons">
-            <button class="filter-button">Popular</button>
-            <button class="filter-button">Top Rated</button>
-            <button class="filter-button">Upcoming</button>
-            <button class="filter-button">Now Playing</button>
+            <a class="filter-button">Popular</a>
+            <a class="filter-button">Top Rated</a>
+            <a class="filter-button">Now Playing</a>
+            <a class="filter-button">Upcoming</a>
         </div>
+
+        
             <div class="search-bar">
                 <form action="/">
                     <input type="text" placeholder="Search..." name="search"></input>

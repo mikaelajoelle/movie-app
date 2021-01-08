@@ -5,6 +5,8 @@ function SingleMovie() {
     
     <main>
 
+    
+
     <section class="single-movie-section">
 
       <div class="single-movie-card">

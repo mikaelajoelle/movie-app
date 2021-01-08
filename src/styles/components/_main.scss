@@ -29,7 +29,7 @@ main {
     grid-template-rows: 1fr;
     grid-gap: 2em;
     padding: 5vw;
-}
+    }   
 
    // About Page
 
@@ -50,9 +50,6 @@ main {
 
    // Single Page
 
-
-   
-
    .single-movie-card{
        margin: 50px 30px 70px 30px;
        background-color: rgb(24, 24, 24);
@@ -63,18 +60,17 @@ main {
        grid-template-columns: 1fr;
        grid-gap: 3em;
 
-       
 
        .movie-button{
            margin-left: 0;
            background-color: transparent;
-           border: 1px solid rgba(161, 161, 161, 0.379);
+           border: 1px solid $borderColor;
            width: 150px;
        }
 
        .movie-button:hover{
-            background-color: #ff0267;
-            border: 1px solid #ff0267;
+            background-color: $pink;
+            border: 1px solid $pink;
         }
 
        .single-movie-rating{
@@ -85,7 +81,7 @@ main {
            height:38px;
            pointer-events: none;
            border-radius: 20%;
-           border: 1px solid rgba(161, 161, 161, 0.379);
+           border: 1px solid $borderColor;
            background: transparent;
            text-align: center;
            line-height: 38px;
@@ -112,7 +108,7 @@ main {
 
        input{
         background-color: rgb(43, 42, 42);
-        color: rgb(161, 161, 161);
+        color: $grey;
         outline: none;
         border: none;
         border-radius: 15px;
@@ -130,21 +126,39 @@ main {
    }
 
    .filter-button{
+    display: none;
     background-color: transparent;
     border-radius: 18px;
     padding: 15px;
+    text-align: center;
     width: 125px;
     outline: none;
-    border: 1px solid rgba(161, 161, 161, 0.379);
-    color: rgb(161, 161, 161);
+    border: 1px solid $borderColor;
+    color: $grey;
     margin: 10px;
     font-family: $bodyFont;
    }
 
+
     .filter-button:hover, .filter-button:active{
-        background-color: #ff0267;
-        border: 1px solid #ff0267;
+        background-color: $pink;
+        border: 1px solid $pink;
         color: white;
+    }
+
+    .dropdown-menu{
+        margin: 5vw 0 0 5vw;
+        font-size: 18px;
+    }
+
+    select{
+        padding: 5px;
+        margin-left: 10px;
+        border-radius: 10px;
+        font-size: 16px;
+        background-color: transparent;
+        color: $grey;
+        outline: none;
     }
 
 
@@ -158,6 +172,14 @@ main {
             grid-template-rows: 1fr;
             grid-gap: 2em;
             padding: 4vw 5vw 4vw 5vw;
+        }
+
+        .filter-button{
+            display: inline-block;
+        }
+
+        .dropdown-menu{
+            display: none;
         }
 
         // Favourites
@@ -177,8 +199,8 @@ main {
             grid-template-columns: 340px 1fr;
             width: 650px;
             margin: 0 auto;
-            margin-top: 300px;
-            margin-bottom: 200px;
+            margin-top: 13vw;
+            margin-bottom: 10vw;
 
             .single-movie-rating{
                 top: 7%;
@@ -186,7 +208,7 @@ main {
             }
         }
 
-        // about page
+        // About page
 
         .about-section{
             padding: 25vw 25vw 3vw 25vw;
@@ -228,10 +250,11 @@ main {
             height: 70px;
             text-align: center;
             font-size: 40px;
-            border: 1px solid rgba(161, 161, 161, 0.379);
+            border: 1px solid $borderColor;
     
             p{
-                color: rgb(161, 161, 161);
+                color: $grey;
+                margin-top: 5px;
             }
         }
     
@@ -261,14 +284,14 @@ main {
             }
     
             p{
-                color: rgb(161, 161, 161);
+                color: $grey;
                 width: 405px;
                 line-height: 25px;
             }
         }
     
        .banner-button{
-           background-color: #ff0267;
+           background-color: $pink;
            border-radius: 18px;
            padding: 15px;
            width: 125px;
@@ -304,7 +327,7 @@ main {
      
                 input{
                 background-color: rgb(43, 42, 42);
-                color: rgb(161, 161, 161);
+                color: $grey;
                 outline: none;
                 border: none;
                 border-radius: 15px;
