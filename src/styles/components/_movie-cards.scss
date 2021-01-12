@@ -104,11 +104,6 @@
     transform: translate(-50%, -50%);
     font-family: $bodyFont;
     
-
-    a{
-      color: white;
-      text-decoration: none;
-    }
   }
 
 
@@ -117,6 +112,22 @@
     color:rgb(212, 211, 211);
     margin-bottom: 0;
     margin-top: 10px;
+  }
+
+  .movie-description{
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; 
+  }
+
+  .movie-description-full{
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical; 
   }
   
 

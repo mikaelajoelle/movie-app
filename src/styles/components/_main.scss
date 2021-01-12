@@ -66,10 +66,13 @@ main {
            background-color: transparent;
            border: 1px solid $borderColor;
            width: 150px;
+           color: $grey;
+           left: 45%;
        }
 
        .movie-button:hover{
             background-color: $pink;
+            color: white;
             border: 1px solid $pink;
         }
 
@@ -105,6 +108,9 @@ main {
        margin-top: 17px;
        width: 160px;
        display: none;
+       position: relative;
+       top: 115px;
+       left: 74%;
 
        input{
         background-color: rgb(43, 42, 42);
@@ -143,7 +149,6 @@ main {
     .filter-button:hover, .filter-button:active{
         background-color: $pink;
         border: 1px solid $pink;
-        color: white;
     }
 
     .dropdown-menu{
@@ -204,7 +209,7 @@ main {
 
             .single-movie-rating{
                 top: 7%;
-                left: 45%;
+                left: 49%;
             }
         }
 
@@ -220,7 +225,6 @@ main {
 
 
         article {
-            
             margin-bottom: 0;
         }
 

@@ -1,7 +1,20 @@
 // Home
 
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import {URL_POPULAR} from '../globals/variables';
+import MainSection from './MainSection';
 
+const Home = () => {
+
+    return (
+        <MainSection sort={URL_POPULAR} />
+    )
+};
+
+export default Home;
+
+
+/*
 
 const Home = () => (
     <main>
@@ -266,3 +279,5 @@ const Home = () => (
 );
 
 export default Home;
+
+*/
