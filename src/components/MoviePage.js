@@ -47,12 +47,13 @@ const MoviePage = () => {
     const movieMaker = (obj) => {
         const movieObj = {
             title: obj.title,
+            runtime: obj.runtime,
             date: obj.release_date,
             rating: obj.vote_average,
             summary: obj.overview,
             img: obj.poster_path,
             id: obj.id,
-            genres: obj.name
+            tagline: obj.tagline
         }
         
         return movieObj;
@@ -66,6 +67,7 @@ const MoviePage = () => {
                 
                     <div className="single-movie-info">
                         <h5>{movieObj.date}</h5>
+                        <h5>{movieObj.runtime} minutes</h5>
                     </div>
                         <h2>{movieObj.title}</h2>
                         <div className="single-movie-rating"><h3>{movieObj.rating}</h3></div>

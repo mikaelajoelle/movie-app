@@ -25,6 +25,3 @@ export const APP_FOLDER_NAME  = '/movie-app';
 
 export const STORAGE_YOUR_MOVIES = 'your-fav-movies';
 
-// Length constants
-export const MAX_LENGTH = 70;
-export const TITLE_MAX_LENGTH = 13;
