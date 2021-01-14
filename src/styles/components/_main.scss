@@ -11,6 +11,7 @@ main {
         display: none;
     } 
     
+    
     // Home
 
    .movie-cards{
@@ -126,30 +127,38 @@ main {
    // Filter Buttons
 
    .top-bar{
-       padding: 4vw 4vw 0vw 4vw;
+       padding: 1vw 4vw 0vw 4vw;
        display: flex;
        justify-content: space-between;
    }
 
    .filter-button{
-    display: none;
-    background-color: transparent;
-    border-radius: 18px;
-    padding: 15px;
-    text-align: center;
-    width: 125px;
-    outline: none;
-    border: 1px solid $borderColor;
-    color: $grey;
-    margin: 10px;
-    font-family: $bodyFont;
+    list-style-type: none;
+    padding-bottom: 0;
    }
 
+   .filter-buttons{
+       display: flex;
+   }
 
-    .filter-button:hover, .filter-button:active{
-        background-color: $pink;
-        border: 1px solid $pink;
-    }
+   .filter-button a{
+    display: none;
+    border: 1px solid $borderColor;
+    border-radius: 18px;
+    text-align: center;
+    padding: 15px;
+    color: $grey;
+    margin: 0 10px;
+    width: 115px;
+
+        &:hover,
+        &:focus,
+        &:active{
+            background-color: $pink;
+            border: 1px solid $pink;
+            color: white;
+        }
+   }
 
     .dropdown-menu{
         margin: 5vw 0 0 5vw;
@@ -179,7 +188,7 @@ main {
             padding: 4vw 5vw 4vw 5vw;
         }
 
-        .filter-button{
+        .filter-button a{
             display: inline-block;
         }
 
@@ -223,7 +232,6 @@ main {
             padding: 0vw 25vw 15vw 25vw;
         }
 
-
         article {
             margin-bottom: 0;
         }
@@ -232,8 +240,17 @@ main {
             display: block;
         }
 
+        .banner-title{
+            max-width: 500px;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical; 
+        }
+
         .banner img{
-            filter: brightness(30%);
+            filter: brightness(25%);
             height: 85vh;
         }
     
@@ -270,12 +287,12 @@ main {
     
         .movie-info-overlay{
             position: absolute;
-            top: 44%;
+            top: 48%;
             left: 12%;
     
     
             h2{
-            font-size: 55px;
+            font-size: 42px;
             text-transform: uppercase;
             color: white;
             margin-bottom: 0;
@@ -306,8 +323,6 @@ main {
            right: 40px;
            font-family: $bodyFont;
        }
-
-      
     }
 
     
@@ -317,6 +332,14 @@ main {
         
         .movie-cards {
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        .banner-title{
+            max-width: 700px;
+        }
+
+        .movie-info-overlay h2{
+            font-size: 55px;
         }
 
          // Favourites

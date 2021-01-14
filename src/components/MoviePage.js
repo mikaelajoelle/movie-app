@@ -52,8 +52,7 @@ const MoviePage = () => {
             rating: obj.vote_average,
             summary: obj.overview,
             img: obj.poster_path,
-            id: obj.id,
-            tagline: obj.tagline
+            id: obj.id
         }
         
         return movieObj;
@@ -72,7 +71,6 @@ const MoviePage = () => {
                         <h2>{movieObj.title}</h2>
                         <div className="single-movie-rating"><h3>{movieObj.rating}</h3></div>
                         <p className="movie-description-full">{movieObj.summary}</p>  
-                        
 
                     {isItemInStorage(movie) ? <button className="movie-button" onClick={removeMovie}>Remove from Favourites</button> : 
                         <button className="movie-button" onClick={addMovie}>Add to Favourites</button>}
