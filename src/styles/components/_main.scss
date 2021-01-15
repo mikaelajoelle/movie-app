@@ -30,7 +30,30 @@ main {
     grid-template-rows: 1fr;
     grid-gap: 2em;
     padding: 5vw;
-    }   
+    }  
+
+    .unfave-button{
+        margin-left: 0;
+        background-color: transparent;
+        border: 1px solid $borderColor;
+        width: 150px;
+        color: $grey;
+        position: absolute;
+        left: 50%;
+        top: 86%;
+        border-radius: 18px;
+        padding: 15px;
+        outline: none;
+        width: 125px;
+        transform: translate(-50%, -50%);
+        font-family: $bodyFont;
+    }
+    
+    .text-box{
+        padding: 19vw 5vw 15vw 5vw;
+        margin: 0 auto;
+        text-align: center;
+    }
 
    // About Page
 
@@ -49,6 +72,14 @@ main {
        margin-top: 20px;
    }
 
+   .favourites-link{
+        color: #d4d3d3;
+   }
+
+   .favourites-link:hover{
+        border-bottom: 1px solid $pink;
+    }
+
    // Single Page
 
    .single-movie-card{
@@ -61,7 +92,6 @@ main {
        grid-template-columns: 1fr;
        grid-gap: 3em;
 
-
        .movie-button{
            margin-left: 0;
            background-color: transparent;
@@ -69,6 +99,7 @@ main {
            width: 150px;
            color: $grey;
            left: 45%;
+           top: 86%;
        }
 
        .movie-button:hover{
@@ -96,9 +127,15 @@ main {
            display: flex;
 
            h5{
-               margin-right: 20px;
+               margin-right: 25px;
                margin-top: 0;
            }
+       }
+
+       .tag{
+           margin: 4px;
+           color: $grey;
+           font-size: 0.9em;
        }
    }
 
@@ -110,7 +147,7 @@ main {
        width: 160px;
        display: none;
        position: relative;
-       top: 115px;
+       top: 50px;
        left: 74%;
 
        input{
@@ -210,8 +247,8 @@ main {
         // Single Page
 
         .single-movie-card{
-            grid-template-columns: 340px 1fr;
-            width: 650px;
+            grid-template-columns: 350px 1fr;
+            width: 680px;
             margin: 0 auto;
             margin-top: 13vw;
             margin-bottom: 10vw;
@@ -225,16 +262,18 @@ main {
         // About page
 
         .about-section{
-            padding: 20vw 25vw 3vw 25vw;
+            padding: 18vw 25vw 2vw 25vw;
         }
 
         .tmdb-section{
-            padding: 0vw 25vw 15vw 25vw;
+            padding: 0vw 25vw 10vw 25vw;
         }
 
         article {
             margin-bottom: 0;
         }
+
+        // Banner 
 
         .banner{
             display: block;

@@ -7,21 +7,24 @@ import {isItemInStorage, setStorage, removeFromStorage} from '../utilities/stora
 
 const MoviePage = () => {
     
+    
     let {movieid} = useParams();
     const [movie, setMovie]  = useState(null);
     const [ifFaved, setIfFaved] = useState([]);
+
     
+    // Convert release date
+    function formatDate(string){
+        let options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(string).toLocaleDateString([],options);
+    }
     
     const addMovie = () => {
         if(!isItemInStorage(movie)){
             setStorage(movie);
         setIfFaved(true);
-        /* for testing
-        console.log(movie);*/
 
         }else{
-        /* for testing
-        console.log('item already exists!'); */
         setIfFaved(false);
         }
         
@@ -29,9 +32,6 @@ const MoviePage = () => {
     const removeMovie = () => {
         removeFromStorage(movie);
         setIfFaved(false);
-        /* for testing
-        console.log(movie);*/
-
     }
 
     useEffect(() => { 
@@ -52,7 +52,8 @@ const MoviePage = () => {
             rating: obj.vote_average,
             summary: obj.overview,
             img: obj.poster_path,
-            id: obj.id
+            id: obj.id,
+            genres: obj.genres
         }
         
         return movieObj;
@@ -65,12 +66,26 @@ const MoviePage = () => {
                     
                 
                     <div className="single-movie-info">
-                        <h5>{movieObj.date}</h5>
+                        <h5>{formatDate(movieObj.date)}</h5>
                         <h5>{movieObj.runtime} minutes</h5>
                     </div>
                         <h2>{movieObj.title}</h2>
                         <div className="single-movie-rating"><h3>{movieObj.rating}</h3></div>
                         <p className="movie-description-full">{movieObj.summary}</p>  
+
+                        <div className="details-info">
+                            <h5>Genres:
+                            {movieObj.genres.length === 0  ?
+                                "N/A"
+                                :
+                                <span>
+                                    {movieObj.genres.map(genre => (
+                                        <span key={genre.id} className="tag">{genre.name}</span>
+                                    ))}
+                                </span> 
+                            }
+                            </h5>
+                        </div>
 
                     {isItemInStorage(movie) ? <button className="movie-button" onClick={removeMovie}>Remove from Favourites</button> : 
                         <button className="movie-button" onClick={addMovie}>Add to Favourites</button>}
@@ -80,6 +95,7 @@ const MoviePage = () => {
                 <div class="single-movie-poster">
                     <img className="img-poster" src={`https://image.tmdb.org/t/p/w500/${movieObj.img}`} alt={`${movieObj.title} poster`} />
                 </div>
+                
             </div>
         );
     }

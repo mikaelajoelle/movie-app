@@ -1,14 +1,31 @@
 // Favourites
 
-import React from 'react';
+import React, {useParams, useState} from 'react';
 import { Link } from 'react-router-dom';
-
+import {isItemInStorage, setStorage, removeFromStorage} from '../utilities/storageMaker';
 
 
 const Favourites = () => {
 
     let films       = localStorage.getItem('your-fav-movies');
     const faveArray = JSON.parse(films);
+    const [ifFaved, setIfFaved] = useState([]);
+
+
+    const addMovie = () => {
+        if(!isItemInStorage(films)){
+            setStorage(films);
+        setIfFaved(true);
+
+        }else{
+        setIfFaved(false);
+        }
+        
+    }
+    const removeMovie = () => {
+        removeFromStorage(films);
+        setIfFaved(false);
+    }
 
     function faveDivs() {
         return faveArray.map((fave, i) => {
@@ -25,6 +42,9 @@ const Favourites = () => {
                                     <Link to={`/${fave.id}`}><button className="movie-button">More Info</button></Link>
                                     
                                 </div>
+
+                                {isItemInStorage(fave) ? <button className="unfave-button" onClick={removeMovie}>Remove from Favourites</button> : 
+                        <button className="unfave-button" onClick={addMovie}>Add to Favourites</button>}
                         </div>
                     </div>
                 </div>      

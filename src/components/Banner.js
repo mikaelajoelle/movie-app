@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom';
 
 const Banner = (props) => {
 
+    
+    // Convert release date
+    function formatDate(string){
+        let options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(string).toLocaleDateString([],options);
+    }
+
     const movieDivs = () => {
         
 
@@ -19,7 +26,7 @@ const Banner = (props) => {
                             </div>
                         </div>
                         <div className="movie-info-overlay">
-                            <h4>{banner.release_date}</h4>
+                            <h4>{formatDate(banner.release_date)}</h4>
                             <h2 className="banner-title">{banner.title}</h2>     
                             <p className="movie-description">{banner.overview}</p>
                             
