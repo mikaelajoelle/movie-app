@@ -4,6 +4,7 @@ import React, {useEffect, useState} from 'react';
 import {URL_MOVIE, API_KEY} from '../globals/variables';
 import {useParams} from 'react-router-dom';
 import {isItemInStorage, setStorage, removeFromStorage} from '../utilities/storageMaker';
+import { Link } from 'react-router-dom';
 
 const MoviePage = () => {
     
@@ -64,6 +65,11 @@ const MoviePage = () => {
             <div className="single-movie-card">
                 <div className="single-movie-container">
                     
+                <Link to='/'>
+                            <svg className="back-button" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
+                                <path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm7.58 0l5.988-5.995 1.414 1.416-4.574 4.579 4.574 4.59-1.414 1.416-5.988-6.006z"/>
+                            </svg>
+                </Link>
                 
                     <div className="single-movie-info">
                         <h5>{formatDate(movieObj.date)}</h5>

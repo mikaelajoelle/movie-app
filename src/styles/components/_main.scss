@@ -40,7 +40,7 @@ main {
         color: $grey;
         position: absolute;
         left: 50%;
-        top: 86%;
+        top: 390px;
         border-radius: 18px;
         padding: 15px;
         outline: none;
@@ -110,8 +110,8 @@ main {
 
        .single-movie-rating{
            position: absolute;
-           top: 3%;
-           left: 82%;
+           top: 2.4%;
+           left: 86.5%;
            width: 48px;
            height:38px;
            pointer-events: none;
@@ -137,6 +137,22 @@ main {
            color: $grey;
            font-size: 0.9em;
        }
+
+       .back-button{
+        filter: invert(48%) sepia(100%) saturate(0%) hue-rotate(327deg) brightness(100%) contrast(115%);
+        margin-bottom: 1.5rem;
+       }
+
+       .back-button:hover{
+        filter: invert(48%) sepia(100%) saturate(8476%) hue-rotate(327deg) brightness(100%) contrast(115%);
+       }
+
+       .back-button-container{
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+        background-color: white;
+        height: 50px;
+       }
+
    }
 
 
@@ -176,17 +192,19 @@ main {
 
    .filter-buttons{
        display: flex;
+       flex-wrap: wrap;
    }
 
    .filter-button a{
-    display: none;
+    display: inline-block;
     border: 1px solid $borderColor;
     border-radius: 18px;
     text-align: center;
-    padding: 15px;
     color: $grey;
-    margin: 0 10px;
-    width: 115px;
+    padding: 14px;
+    margin: 5px 8px;
+    width: 92px;
+    font-size: 0.7em;
 
         &:hover,
         &:focus,
@@ -227,6 +245,10 @@ main {
 
         .filter-button a{
             display: inline-block;
+            padding: 15px;
+            margin: 0 10px;
+            width: 115px;
+
         }
 
         .dropdown-menu{
@@ -248,10 +270,10 @@ main {
 
         .single-movie-card{
             grid-template-columns: 350px 1fr;
-            width: 680px;
+            width: 700px;
             margin: 0 auto;
             margin-top: 13vw;
-            margin-bottom: 10vw;
+            margin-bottom: 8vw;
 
             .single-movie-rating{
                 top: 7%;

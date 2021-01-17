@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => (
     <footer>
         
-        <a href="#0"><img class="footer-logo" src={process.env.PUBLIC_URL + '/dbl-logo.png'} alt="logo"/></a>
+        <NavLink className="logo-link" to={'/'}><img class="footer-logo" src={process.env.PUBLIC_URL + '/dbl-logo.png'} alt="dbl feature logo"/></NavLink>
         <ul>
             <li>
                 <NavLink className="footer-link" to={'/'}>Home</NavLink>
@@ -19,13 +19,13 @@ const Footer = () => (
 
         <ul>
             <li>
-                <NavLink className="help-link" to={'/'}>Contact</NavLink>
+                <NavLink className="help-link" to={'#0'}>Contact</NavLink>
             </li>
             <li>
-                <NavLink className="help-link" to={'/about'}>Help Center</NavLink>
+                <NavLink className="help-link" to={'#0'}>Help Center</NavLink>
             </li>
             <li>
-                <NavLink className="help-link" to={'/favourites'}>Media Center</NavLink>
+                <NavLink className="help-link" to={'#0'}>Media Center</NavLink>
             </li>
         </ul>
 

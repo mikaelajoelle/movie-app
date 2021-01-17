@@ -11,6 +11,8 @@ const MainSection = ({ sort }) => {
 
     const [movies, setMovies] = useState(null);
     const [banner, setBanner] = useState(null);
+    
+  
 
     useEffect(() => { 
         const fetchMovie = async () => {
@@ -38,6 +40,7 @@ const MainSection = ({ sort }) => {
             { banner != null && <Banner banner = {banner} />}
                 <SearchBar />
                 <TitleFilter/>
+                
                 { movies != null && <MovieGrid movies = {movies} />}
             </section>
         </main>

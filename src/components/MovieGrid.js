@@ -28,7 +28,6 @@ const MovieGrid = (props) => {
                                
                                 <div className="button-container">
                                     <Link to={`/${movie.id}`}><button className="movie-button">More Info</button></Link>
-                                
                                 </div>
                         </div>
                     </div>
