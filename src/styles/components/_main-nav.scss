@@ -22,19 +22,21 @@
     ul {
         @include flatten($is-list: true);
     }
+    
     a.router-link {
         color: $light;
         text-decoration: none;
         display: block;
         line-height: 50px;
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-weight: bold;
         padding: 0 28px;
        
         &:hover,
         &:focus,
         &:active {
-            background-color: rgba(white, 0.2);
+            text-decoration: underline;
+            text-decoration-color: $pink;
         }
 
     }
@@ -44,8 +46,6 @@
         visibility: visible;
         transition: none;
         background-color: transparent;
-        
-        
 
         .show & {
             transition: none;
@@ -55,15 +55,12 @@
         ul {
             display: flex;
             justify-content: flex-end;
-            height: 110px;
+            height: 100px;
         }
 
-        
-
         a.router-link {
-            
             text-align: center;
-            line-height: 110px;
+            line-height: 100px;
             width: 170px;
             
         }

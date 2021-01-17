@@ -7,7 +7,7 @@ main {
     
     // Banner
 
-    .banner{
+    .movie-info-overlay, .text-overlay{
         display: none;
     } 
     
@@ -111,7 +111,7 @@ main {
        .single-movie-rating{
            position: absolute;
            top: 2.4%;
-           left: 86.5%;
+           left: 82%;
            width: 48px;
            height:38px;
            pointer-events: none;
@@ -180,7 +180,7 @@ main {
    // Filter Buttons
 
    .top-bar{
-       padding: 1vw 4vw 0vw 4vw;
+       padding: 4vw 4vw 0vw 4vw;
        display: flex;
        justify-content: space-between;
    }
@@ -241,6 +241,10 @@ main {
             grid-template-rows: 1fr;
             grid-gap: 2em;
             padding: 4vw 5vw 4vw 5vw;
+        }
+
+        .top-bar{
+            padding-top: 1vw;
         }
 
         .filter-button a{
@@ -312,7 +316,7 @@ main {
 
         .banner img{
             filter: brightness(25%);
-            height: 85vh;
+            height: 100vh;
         }
     
         img{
@@ -323,6 +327,7 @@ main {
         }
     
         .text-overlay{
+            display: block;
             position: relative;
             bottom: 55%;
             left: 38%;
@@ -341,14 +346,16 @@ main {
         }
     
         #rating-overlay{
+            display: block;
             position: absolute;
-            top: 51%;
+            bottom: 195px;
             left: 80%;
         }
     
         .movie-info-overlay{
+            display: block;
             position: absolute;
-            top: 48%;
+            bottom: 100px;
             left: 12%;
     
     

@@ -54,7 +54,7 @@ const MoviePage = () => {
             summary: obj.overview,
             img: obj.poster_path,
             id: obj.id,
-            genres: obj.genres
+            genres: obj.genres,
         }
         
         return movieObj;
@@ -62,6 +62,7 @@ const MoviePage = () => {
 
     const movieDiv = (movieObj) => {
         return (
+            
             <div className="single-movie-card">
                 <div className="single-movie-container">
                     
@@ -93,8 +94,10 @@ const MoviePage = () => {
                             </h5>
                         </div>
 
+
                     {isItemInStorage(movie) ? <button className="movie-button" onClick={removeMovie}>Remove from Favourites</button> : 
                         <button className="movie-button" onClick={addMovie}>Add to Favourites</button>}
+                        
 
                 </div>
 
