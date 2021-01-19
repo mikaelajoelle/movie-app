@@ -18,6 +18,10 @@ export const URL_MOVIE        = 'https://api.themoviedb.org/3/movie/';
 // General App Settings
 export const APP_FOLDER_NAME  = '/movie-app';
 
+// Search Movies
+export const URL_SEARCH = `https://api.themoviedb.org/3/search/movie${API_KEY}`
+
+
 // export const API_URL_REQUEST_GENRE =  `https://api.themoviedb.org/3/genre/movie/list${API_KEY}&language=en-US`;
 // export const API_URL_REQUEST_IMG = 'https://image.tmdb.org/t/p/w500/';
 

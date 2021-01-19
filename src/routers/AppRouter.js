@@ -24,7 +24,7 @@ class AppRouter extends React.Component {
             <Header />
               <Switch>
                   <Route path={'/'} exact><Home /></Route>
-                  <Route path={'/about'}><About /></Route>
+                  <Route path={'/about'} exact><About /></Route>
                   <Route path="/favourites" exact><Favourites /></Route>
               <Route path="/popular" exact><Popular /></Route>
               <Route path="/top-rated" exact><TopRated /></Route>

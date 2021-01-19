@@ -3,6 +3,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Image Imports
+import placeholderImage from '../images/placeholder.jpg';
+
 const MovieGrid = (props) => {
 
     // Convert release date
@@ -19,7 +22,15 @@ const MovieGrid = (props) => {
             return (
                 <div className={`movie movie-0${i}`} key={i}>
                     <div className="card">
+                        { movie.poster_path == null ?
+                        <div className="unavailable-poster">
+                            <img className="placeholder-poster" src={placeholderImage} alt="Placeholder poster image"/>
+                        </div>
+                        : 
+                        <div className="available-poster">
                         <img className="poster-img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`${movie.title} poster`} />
+                        </div>
+                        }
                         <div className="content">
                             <h2>{movie.title}</h2>
                             <h5>{formatDate(movie.release_date)}</h5>

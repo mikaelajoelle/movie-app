@@ -18,7 +18,7 @@ const Banner = (props) => {
             return (
                 <div className={`banner banner-0${i}`} key={i}>
                     <div className="banner">
-                        <img className="banner-img" src={`https://image.tmdb.org/t/p/w1280/${banner.backdrop_path}`} alt={`${banner.title} poster`} />
+                        <img className="banner-img" src={`https://image.tmdb.org/t/p/w1280/${banner.backdrop_path}`} alt={`${banner.title} backdrop`} />
                         <div className="text-overlay" id="rating-overlay">
                             <p>{banner.vote_average}</p>
                             <div className="button-container">

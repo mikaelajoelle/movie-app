@@ -4,6 +4,18 @@
 @use '../utilities/functions' as *;
 
 main {
+
+    // Search
+
+    .search-poster{
+        width: 150px;
+        height: auto;
+    }
+
+    .search-results-list{
+        margin-left: 4vw;
+        margin-bottom: 1vw;
+    }
     
     // Banner
 
@@ -183,6 +195,7 @@ main {
        padding: 4vw 4vw 0vw 4vw;
        display: flex;
        justify-content: space-between;
+      
    }
 
    .filter-button{
@@ -191,8 +204,15 @@ main {
    }
 
    .filter-buttons{
-       display: flex;
-       flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 110px 110px;
+    grid-template-rows: 50px 50px;
+       
+       margin: 0 auto;
+
+       @media (min-width: 475px){
+        display: flex;
+       }
    }
 
    .filter-button a{
@@ -207,12 +227,18 @@ main {
     font-size: 0.7em;
 
         &:hover,
-        &:focus,
-        &:active{
+        &:focus{
             background-color: $pink;
             border: 1px solid $pink;
             color: white;
         }
+        
+   }
+
+   a.current-filter{
+    background-color: $pink;
+    border: 1px solid $pink;
+    color: white;
    }
 
     .dropdown-menu{
@@ -253,6 +279,10 @@ main {
             margin: 0 10px;
             width: 115px;
 
+        }
+
+        .filter-buttons{
+            margin: 0;
         }
 
         .dropdown-menu{
