@@ -1,5 +1,7 @@
 // Search Results
 
+/* NOT NEEDED
+
 import React, { useState, useEffect } from 'react';
 import {Link} from "react-router-dom";
 
@@ -11,14 +13,14 @@ const Results = (props) => {
     
     
 
-    const genrequery = "&with_genres=" + props.genre; 
+    
 
     const sortquery = "&sort_by=" + props.sort;
     
     useEffect(()=> {
         
         const getMovies = async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=aa9e4fb9176c3cfe803a8ef198c28c23&language=en-US&${sortquery}&include_adult=false&include_video=false&page=1${genrequery}`);
+            const res = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=aa9e4fb9176c3cfe803a8ef198c28c23&language=en-US&${sortquery}&include_adult=false&include_video=false&page=1`);
             let data = await res.json();
             
             let movies = data.results.map((movie)=>{
@@ -30,8 +32,6 @@ const Results = (props) => {
                         <Link to={`/${movie.id}`}>
                             
                         <img className="poster" src={mov.poster_path == null ? process.env.PUBLIC_URL + '/images/placeholder.png' : "https://image.tmdb.org/t/p/w342" + movie.poster_path} alt="misc" />
-                        
-                        
                        
                             <div className="overview">
                                 
@@ -53,7 +53,7 @@ const Results = (props) => {
         getMovies();
         
 
-    }, [genrequery, sortquery])
+    }, [sortquery])
     
         return(
             <div className="featuredmovies">
@@ -65,3 +65,5 @@ const Results = (props) => {
     
 
 export default Results;
+
+*/

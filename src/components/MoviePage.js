@@ -5,6 +5,7 @@ import {URL_MOVIE, API_KEY} from '../globals/variables';
 import {useParams} from 'react-router-dom';
 import {isItemInStorage, setStorage, removeFromStorage} from '../utilities/storageMaker';
 import { Link } from 'react-router-dom';
+import placeholderImage from '../images/placeholder.jpg';
 
 const MoviePage = () => {
     
@@ -37,8 +38,8 @@ const MoviePage = () => {
 
     useEffect(() => { 
         const fetchMovie = async () => {
-            const response = await fetch(URL_MOVIE + movieid + API_KEY)
-            let data = await response.json(); 
+            const res = await fetch(URL_MOVIE + movieid + API_KEY)
+            let data = await res.json(); 
             setMovie(movieMaker(data));
         }
             fetchMovie();
@@ -102,7 +103,15 @@ const MoviePage = () => {
                 </div>
 
                 <div class="single-movie-poster">
-                    <img className="img-poster" src={`https://image.tmdb.org/t/p/w500/${movieObj.img}`} alt={`${movieObj.title} poster`} />
+                    { movieObj.img == null ?
+                        <div className="unavailable-poster">
+                            <img className="placeholder-poster" src={placeholderImage} alt="Placeholder poster image"/>
+                        </div>
+                        : 
+                        <div className="available-poster">
+                       <img className="poster-img" src={`https://image.tmdb.org/t/p/w500/${movieObj.img}`} alt={`${movieObj.title} poster`} />
+                        </div>
+                    }
                 </div>
                 
             </div>

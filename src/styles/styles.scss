@@ -13,6 +13,8 @@
 @use './components/main';
 @use './components/footer';
 @use './components/movie-cards';
+@use './components/search';
+@use './components/banner';
 
 // Utilities
 @use './utilities/utility-classes';

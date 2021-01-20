@@ -2,8 +2,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-// Image Imports
 import placeholderImage from '../images/placeholder.jpg';
 
 const MovieGrid = (props) => {

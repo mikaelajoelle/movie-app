@@ -2,56 +2,53 @@
 
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-
+import placeholderImage from '../images/placeholder.jpg';
 
   
 const Search = () => {
+
+    // Convert release date
+    function formatDate(string){
+        let options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(string).toLocaleDateString([],options);
+    }
+
     const [input, setInput] = useState([]);
     const [results, setResults] = useState([]);
     var empty = '';
+    
     const clearSearch = () => {
-
     
-
-    
-        if(document.getElementById('searchField').value === ''){
+        if(document.getElementById('search-input').value === ''){
             setInput('');
         }
+    }
 
+    const searchEnter = () => {
+
+        if((document.getElementById('search-input').value) === ''){
+        var newQuery = '';
         
+        }else{
+        var query = document.getElementById('search-input').value;
+        
+        var newQuery = query.split(' ');
+        }
+        
+        setInput(newQuery)
     }
-  const searchFast = () => {
-    
-    
-    
-
-    if((document.getElementById('searchField').value) === ''){
-      var newQuery = '';
-      
-    }else{
-      var query = document.getElementById('searchField').value;
-      
-      var newQuery = query.split(' ');
-    }
-    
-    setInput(newQuery)
-    
-  }
   
-  useEffect(()=> {
-    
-    // var queries = input.toString();
-    var queries = Array.prototype.join.call(input, " ");
-    
-    if(queries === ''){
-      
-      setResults(empty);
-      return;
+    useEffect(()=> {
         
-      
-      
-      
-    }
+        // var queries = input.toString();
+        var queries = Array.prototype.join.call(input, " ");
+        
+        if(queries === ''){
+        
+        setResults(empty);
+        return;
+        
+        }
     
     const getResults = async () => {
       
@@ -66,14 +63,22 @@ const Search = () => {
           return(
             <Link to={`/${movie.id}`} onClick={resetInput} >
             
-              
               <li>
                 <div className="search-results-list">
-                 <img className="search-poster" src={"https://image.tmdb.org/t/p/w500" + movie.poster_path} alt="Movie poster" /> 
+                  
+                { movie.poster_path == null ?
+                        <div className="unavailable-poster">
+                            <img className="placeholder-search-poster" src={placeholderImage} alt="Placeholder poster image"/>
+                        </div>
+                        : 
+                        <div className="available-poster">
+                        <img className="search-poster" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`${movie.title} poster`} />
+                        </div>
+                        }
                 
                 <div className="search-info">
-                  <p>{movie.title}</p>
-                  <p>{movie.release_date}</p>
+                  <p className="search-title">{movie.title}</p>
+                  <p>{formatDate(movie.release_date)}</p>
                   <p>{movie.vote_average}</p>
                 </div>
                 </div>
@@ -84,8 +89,6 @@ const Search = () => {
       })
       
         setResults(movies);
-      
-      
     
   }
   getResults();
@@ -93,10 +96,10 @@ const Search = () => {
 
   
   const resetInput = () => {
-    let input = document.getElementById('searchField');
+    let input = document.getElementById('search-input');
 
     input.value = '';
-    if(document.getElementById('searchField').value === ''){
+    if(document.getElementById('search-input').value === ''){
       setInput('');
       var bar = document.getElementById('search-bar');
       
@@ -105,10 +108,10 @@ const Search = () => {
   return(
     <div className="search-bar-container">
       <div className="search-bar">
-          <input type="text" name="searchField" id="searchField"  placeholder="Search..."  onKeyUp={searchFast} onKeyDown={clearSearch}/>
+          <input type="text" name="search-input" id="search-input"  placeholder="Search..."  onKeyUp={searchEnter} onKeyDown={clearSearch}/>
       </div>
       
-      <div className="resultlist">
+      <div className="result-list">
         <ul>
           
           {results}
@@ -124,24 +127,3 @@ const Search = () => {
 }
 
 export default Search;
-
-
-
-/*
-
-import React from 'react';
-
-class SearchBar extends React.Component {
-    render(){
-        return (
-            <div className="search-bar">
-                <input type="text"placeholder="Search" />
-
-            </div>
-        )
-    }
-}
-
-export default SearchBar;
-
-*/

@@ -1,0 +1,56 @@
+// Search
+
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+
+   .search-bar{
+    display: none;
+}
+
+    .search-poster,
+    .placeholder-search-poster{
+        width: 150px;
+        height: auto;
+    }
+
+    .search-results-list{
+        margin-left: 4vw;
+        margin-bottom: 1vw;
+    }
+
+    .result-list{
+        padding-top: 10vw;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.913);
+
+        ul{
+            display: flex;
+        }
+
+    }
+
+@media (min-width: 1000px){
+
+    .search-bar{
+        display: block;
+        margin-top: 4.5vw;
+        width: 310px;
+        position: absolute;
+        right: 5vw;
+        z-index: 3;
+
+            input{
+            background-color: rgb(43, 42, 42);
+            color: $grey;
+            outline: none;
+            border: none;
+            border-radius: 15px;
+            padding: 10px;
+            width: 310px;
+ 
+            }
+    }
+
+}

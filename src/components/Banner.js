@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import placeholderBannerImage from '../images/placeholder-banner.jpg';
 
 const Banner = (props) => {
 
@@ -18,7 +19,15 @@ const Banner = (props) => {
             return (
                 <div className={`banner banner-0${i}`} key={i}>
                     <div className="banner">
-                        <img className="banner-img" src={`https://image.tmdb.org/t/p/w1280/${banner.backdrop_path}`} alt={`${banner.title} backdrop`} />
+                        { banner.backdrop_path == null ?
+                            <div className="unavailable-banner">
+                                <img className="placeholder-banner" src={placeholderBannerImage} alt="Placeholder banner image"/>
+                            </div>
+                            : 
+                            <div className="available-banner">
+                                <img className="banner-img" src={`https://image.tmdb.org/t/p/w1280/${banner.backdrop_path}`} alt={`${banner.title} backdrop`} />
+                            </div>
+                        }
                         <div className="text-overlay" id="rating-overlay">
                             <p>{banner.vote_average}</p>
                             <div className="button-container">

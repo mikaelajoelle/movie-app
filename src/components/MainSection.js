@@ -16,8 +16,8 @@ const MainSection = ({ sort }) => {
 
     useEffect(() => { 
         const fetchMovie = async () => {
-            const popularResponse = await fetch(sort + API_KEY)
-            let data = await popularResponse.json(); 
+            const res = await fetch(sort + API_KEY)
+            let data = await res.json(); 
             let filmArray = data.results.slice(0,12);
             setMovies(filmArray) 
             }
@@ -26,8 +26,8 @@ const MainSection = ({ sort }) => {
 
     useEffect(() => { 
         const fetchBanner = async () => {
-            const popularResponse = await fetch(sort + API_KEY)
-            let data = await popularResponse.json(); 
+            const res = await fetch(sort + API_KEY)
+            let data = await res.json(); 
             let filmArray = data.results.slice(0,1);
             setBanner(filmArray) 
             }

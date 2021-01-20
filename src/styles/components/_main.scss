@@ -4,25 +4,6 @@
 @use '../utilities/functions' as *;
 
 main {
-
-    // Search
-
-    .search-poster{
-        width: 150px;
-        height: auto;
-    }
-
-    .search-results-list{
-        margin-left: 4vw;
-        margin-bottom: 1vw;
-    }
-    
-    // Banner
-
-    .movie-info-overlay, .text-overlay{
-        display: none;
-    } 
-    
     
     // Home
 
@@ -166,28 +147,6 @@ main {
        }
 
    }
-
-
-   // Search Bar
-
-   .search-bar{
-       margin-top: 17px;
-       width: 160px;
-       display: none;
-       position: relative;
-       top: 50px;
-       left: 74%;
-
-       input{
-        background-color: rgb(43, 42, 42);
-        color: $grey;
-        outline: none;
-        border: none;
-        border-radius: 15px;
-        padding: 10px;
-        width: 160px;
-       }
-   }
   
    // Filter Buttons
 
@@ -204,6 +163,7 @@ main {
    }
 
    .filter-buttons{
+    z-index: 2;
     display: grid;
     grid-template-columns: 110px 110px;
     grid-template-rows: 50px 50px;
@@ -270,7 +230,7 @@ main {
         }
 
         .top-bar{
-            padding-top: 1vw;
+            padding-top: 4vw;
         }
 
         .filter-button a{
@@ -328,26 +288,6 @@ main {
         article {
             margin-bottom: 0;
         }
-
-        // Banner 
-
-        .banner{
-            display: block;
-        }
-
-        .banner-title{
-            max-width: 500px;
-            display: -webkit-box;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical; 
-        }
-
-        .banner img{
-            filter: brightness(25%);
-            height: 100vh;
-        }
     
         img{
             object-fit: cover;
@@ -356,71 +296,6 @@ main {
             filter: brightness(85%);
         }
     
-        .text-overlay{
-            display: block;
-            position: relative;
-            bottom: 55%;
-            left: 38%;
-            border-radius: 20%;
-            width: 85px;
-            line-height: 120px;
-            height: 70px;
-            text-align: center;
-            font-size: 40px;
-            border: 1px solid $borderColor;
-    
-            p{
-                color: $grey;
-                margin-top: 5px;
-            }
-        }
-    
-        #rating-overlay{
-            display: block;
-            position: absolute;
-            bottom: 195px;
-            left: 80%;
-        }
-    
-        .movie-info-overlay{
-            display: block;
-            position: absolute;
-            bottom: 100px;
-            left: 12%;
-    
-    
-            h2{
-            font-size: 42px;
-            text-transform: uppercase;
-            color: white;
-            margin-bottom: 0;
-            }
-    
-            h3{
-                color: white;
-                letter-spacing: 1px;
-                font-size: 18px;
-            }
-    
-            p{
-                color: $grey;
-                width: 405px;
-                line-height: 25px;
-            }
-        }
-    
-       .banner-button{
-           background-color: $pink;
-           border-radius: 18px;
-           padding: 15px;
-           width: 125px;
-           outline: none;
-           border: none;
-           color: white;
-           position: relative;
-           right: 40px;
-           font-family: $bodyFont;
-       }
     }
 
     
@@ -432,34 +307,12 @@ main {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        .banner-title{
-            max-width: 700px;
-        }
-
-        .movie-info-overlay h2{
-            font-size: 55px;
-        }
-
          // Favourites
 
         .movie-cards-favourites {
             grid-template-columns: repeat(3, 1fr);
         }
 
-        .search-bar{
-            width: 320px;
-            display: block;
-     
-                input{
-                background-color: rgb(43, 42, 42);
-                color: $grey;
-                outline: none;
-                border: none;
-                border-radius: 15px;
-                padding: 10px;
-                width: 320px;
-                }
-            }
     }
 
 
