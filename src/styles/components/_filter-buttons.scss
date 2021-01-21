@@ -1,0 +1,95 @@
+// Filter Buttons
+
+@use '../base/settings' as *;
+@use '../utilities/functions' as *;
+
+
+.top-bar{
+    padding: 4vw 4vw 0vw 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-button{
+    list-style-type: none;
+    padding-bottom: 0;
+}
+
+.filter-buttons{
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 110px 110px;
+    grid-template-rows: 50px 50px;
+    
+    margin: 0 auto;
+
+    @media (min-width: 475px){
+        display: flex;
+    }
+}
+
+.filter-button a{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid $borderColor;
+    border-radius: 18px;
+    text-align: center;
+    color: $grey;
+    padding: 14px;
+    margin: 5px 8px;
+    width: 92px;
+    font-size: 0.7em;
+
+     &:hover,
+     &:focus{
+         background-color: $pink;
+         border: 1px solid $pink;
+         color: white;
+     }
+}
+
+a.current-filter{
+    background-color: $pink;
+    border: 1px solid $pink;
+    color: white;
+}
+
+ .dropdown-menu{
+     margin: 5vw 0 0 5vw;
+     font-size: 18px;
+ }
+
+ select{
+     padding: 5px;
+     margin-left: 10px;
+     border-radius: 10px;
+     font-size: 16px;
+     background-color: transparent;
+     color: $grey;
+     outline: none;
+ }
+
+ @media (min-width: 720px){
+
+     .filter-button a{
+         display: inline-block;
+         padding: 15px;
+         margin: 0 10px;
+         width: 115px;
+     }
+
+     .filter-buttons{
+         margin: 0;
+     }
+ }
+
+
+ @media (min-width: 720px){
+
+
+     article {
+         margin-bottom: 0;
+     }
+
+ 
+ }

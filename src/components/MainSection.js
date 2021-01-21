@@ -18,8 +18,8 @@ const MainSection = ({ sort }) => {
         const fetchMovie = async () => {
             const res = await fetch(sort + API_KEY)
             let data = await res.json(); 
-            let filmArray = data.results.slice(0,12);
-            setMovies(filmArray) 
+            let movieArray = data.results.slice(0,12);
+            setMovies(movieArray) 
             }
             fetchMovie();
         }, [sort]);
@@ -28,8 +28,8 @@ const MainSection = ({ sort }) => {
         const fetchBanner = async () => {
             const res = await fetch(sort + API_KEY)
             let data = await res.json(); 
-            let filmArray = data.results.slice(0,1);
-            setBanner(filmArray) 
+            let movieArray = data.results.slice(0,1);
+            setBanner(movieArray) 
             }
             fetchBanner();
         }, [sort]);

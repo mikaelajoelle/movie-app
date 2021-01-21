@@ -39,8 +39,7 @@ const Search = () => {
     }
   
     useEffect(()=> {
-        
-        // var queries = input.toString();
+      
         var queries = Array.prototype.join.call(input, " ");
         
         if(queries === ''){
@@ -66,21 +65,21 @@ const Search = () => {
               <li>
                 <div className="search-results-list">
                   
-                { movie.poster_path == null ?
-                        <div className="unavailable-poster">
-                            <img className="placeholder-search-poster" src={placeholderImage} alt="Placeholder poster image"/>
-                        </div>
-                        : 
-                        <div className="available-poster">
-                        <img className="search-poster" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`${movie.title} poster`} />
-                        </div>
-                        }
+                  { movie.poster_path == null ?
+                          <div className="unavailable-poster">
+                              <img className="placeholder-search-poster" src={placeholderImage} alt="Placeholder poster image"/>
+                          </div>
+                          : 
+                          <div className="available-poster">
+                          <img className="search-poster" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={`${movie.title} poster`} />
+                          </div>
+                          }
                 
-                <div className="search-info">
-                  <p className="search-title">{movie.title}</p>
-                  <p>{formatDate(movie.release_date)}</p>
-                  <p>{movie.vote_average}</p>
-                </div>
+                  <div className="search-info">
+                    <p className="search-title">{movie.title}</p>
+                    <p>{formatDate(movie.release_date)}</p>
+                    <p>{movie.vote_average}</p>
+                  </div>
                 </div>
                 
               </li>
@@ -115,7 +114,6 @@ const Search = () => {
         <ul>
           
           {results}
-          
           
         </ul>
       </div>

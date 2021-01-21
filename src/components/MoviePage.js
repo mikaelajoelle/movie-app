@@ -84,17 +84,16 @@ const MoviePage = () => {
                         <div className="details-info">
                             <h5>Genres:
                             {movieObj.genres.length === 0  ?
-                                "N/A"
+                                <span className="no-genre">N/A</span>
                                 :
                                 <span>
                                     {movieObj.genres.map(genre => (
-                                        <span key={genre.id} className="tag">{genre.name}</span>
+                                        <span key={genre.id} className="genre-tag">{genre.name}</span>
                                     ))}
                                 </span> 
                             }
                             </h5>
                         </div>
-
 
                     {isItemInStorage(movie) ? <button className="movie-button" onClick={removeMovie}>Remove from Favourites</button> : 
                         <button className="movie-button" onClick={addMovie}>Add to Favourites</button>}

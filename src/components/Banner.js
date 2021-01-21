@@ -28,13 +28,13 @@ const Banner = (props) => {
                                 <img className="banner-img" src={`https://image.tmdb.org/t/p/w1280/${banner.backdrop_path}`} alt={`${banner.title} backdrop`} />
                             </div>
                         }
-                        <div className="text-overlay" id="rating-overlay">
+                        <div className="text-overlay" id="right-text-overlay">
                             <p>{banner.vote_average}</p>
                             <div className="button-container">
                                     <Link to={`/${banner.id}`}><button className="banner-button">More Info</button></Link>
                             </div>
                         </div>
-                        <div className="movie-info-overlay">
+                        <div className="movie-info-overlay" id="left-text-overlay">
                             <h4>{formatDate(banner.release_date)}</h4>
                             <h2 className="banner-title">{banner.title}</h2>     
                             <p className="movie-description">{banner.overview}</p>

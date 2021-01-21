@@ -4,8 +4,19 @@
 @use '../utilities/functions' as *;
 
 main {
+
+    // All images
+
+    img{ 
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        filter: brightness(85%);
+    }
     
+    // ========================================================================
     // Home
+    // ========================================================================
 
    .movie-cards{
         display: grid;
@@ -15,7 +26,40 @@ main {
         padding: 5vw;
    }
 
+   @media (min-width: 720px){
+        
+      .movie-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-gap: 2em;
+        padding: 4vw 5vw 4vw 5vw;
+        }
+
+        .top-bar{
+            padding-top: 4vw;
+        }
+   }
+
+   @media (min-width: 1000px){
+    
+        .movie-cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+
+    @media (min-width: 1400px){
+            
+        .movie-cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+
+   // ========================================================================
    // Favourites
+   // ========================================================================
 
    .movie-cards-favourites{
     display: grid;
@@ -23,57 +67,100 @@ main {
     grid-template-rows: 1fr;
     grid-gap: 2em;
     padding: 5vw;
+
+        .unfave-button{
+            margin-left: 0;
+            background-color: transparent;
+            border: 1px solid $borderColor;
+            color: $grey;
+            position: absolute;
+            left: 50%;
+            top: 390px;
+            border-radius: 18px;
+            padding: 15px;
+            outline: none;
+            width: 125px;
+            transform: translate(-50%, -50%);
+            font-family: $bodyFont;
+        }
+        
     }  
 
-    .unfave-button{
-        margin-left: 0;
-        background-color: transparent;
-        border: 1px solid $borderColor;
-        width: 150px;
-        color: $grey;
-        position: absolute;
-        left: 50%;
-        top: 390px;
-        border-radius: 18px;
-        padding: 15px;
-        outline: none;
-        width: 125px;
-        transform: translate(-50%, -50%);
-        font-family: $bodyFont;
-    }
-    
     .text-box{
         padding: 19vw 5vw 15vw 5vw;
         margin: 0 auto;
         text-align: center;
     }
 
+    @media (min-width: 720px){
+
+        .movie-cards-favourites {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-gap: 2em;
+            padding: 10vw 5vw 5vw 5vw;
+            margin-top: 35px;
+        }
+    }
+
+    @media (min-width: 1000px){
+
+         .movie-cards-favourites {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 1400px){
+
+        .movie-cards-favourites {
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 0;
+        }
+    }
+
+
+    // ========================================================================
    // About Page
+   // =========================================================================
 
    .about-section{
        padding: 10vw 10vw 8vw 10vw;
        margin: 0 auto;
+
+        .favourites-link{
+            color: #d4d3d3;
+        }
+
+        .favourites-link:hover{
+            border-bottom: 1px solid $pink;
+        }
    }
 
    .tmdb-section{
         margin: 0 auto;
         padding: 0vw 10vw 10vw 10vw;
+
+        .tmdb-logo{
+            width: 50px;
+            margin-top: 20px;
+        }
    }
 
-   .tmdb-logo{
-       width: 50px;
-       margin-top: 20px;
+   @media (min-width: 720px){
+
+        .about-section{
+            padding: 18vw 25vw 2vw 25vw;
+        }
+
+        .tmdb-section{
+            padding: 0vw 25vw 10vw 25vw;
+        }
    }
 
-   .favourites-link{
-        color: #d4d3d3;
-   }
-
-   .favourites-link:hover{
-        border-bottom: 1px solid $pink;
-    }
-
+   // ========================================================================
    // Single Page
+   // ========================================================================
 
    .single-movie-card{
        margin: 50px 30px 70px 30px;
@@ -84,6 +171,10 @@ main {
        display: grid;
        grid-template-columns: 1fr;
        grid-gap: 3em;
+
+       .no-genre{
+           margin-left: 5px;
+       }
 
        .movie-button{
            margin-left: 0;
@@ -125,7 +216,7 @@ main {
            }
        }
 
-       .tag{
+       .genre-tag{
            margin: 4px;
            color: $grey;
            font-size: 0.9em;
@@ -147,120 +238,8 @@ main {
        }
 
    }
-  
-   // Filter Buttons
 
-   .top-bar{
-       padding: 4vw 4vw 0vw 4vw;
-       display: flex;
-       justify-content: space-between;
-      
-   }
-
-   .filter-button{
-    list-style-type: none;
-    padding-bottom: 0;
-   }
-
-   .filter-buttons{
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 110px 110px;
-    grid-template-rows: 50px 50px;
-       
-       margin: 0 auto;
-
-       @media (min-width: 475px){
-        display: flex;
-       }
-   }
-
-   .filter-button a{
-    display: inline-block;
-    border: 1px solid $borderColor;
-    border-radius: 18px;
-    text-align: center;
-    color: $grey;
-    padding: 14px;
-    margin: 5px 8px;
-    width: 92px;
-    font-size: 0.7em;
-
-        &:hover,
-        &:focus{
-            background-color: $pink;
-            border: 1px solid $pink;
-            color: white;
-        }
-        
-   }
-
-   a.current-filter{
-    background-color: $pink;
-    border: 1px solid $pink;
-    color: white;
-   }
-
-    .dropdown-menu{
-        margin: 5vw 0 0 5vw;
-        font-size: 18px;
-    }
-
-    select{
-        padding: 5px;
-        margin-left: 10px;
-        border-radius: 10px;
-        font-size: 16px;
-        background-color: transparent;
-        color: $grey;
-        outline: none;
-    }
-
-
-    @media (min-width: 720px){
-
-        // Home
-        
-        .movie-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr;
-            grid-gap: 2em;
-            padding: 4vw 5vw 4vw 5vw;
-        }
-
-        .top-bar{
-            padding-top: 4vw;
-        }
-
-        .filter-button a{
-            display: inline-block;
-            padding: 15px;
-            margin: 0 10px;
-            width: 115px;
-
-        }
-
-        .filter-buttons{
-            margin: 0;
-        }
-
-        .dropdown-menu{
-            display: none;
-        }
-
-        // Favourites
-
-        .movie-cards-favourites {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: 1fr;
-            grid-gap: 2em;
-            padding: 10vw 5vw 5vw 5vw;
-            margin-top: 35px;
-        }
-
-        // Single Page
+   @media (min-width: 720px){
 
         .single-movie-card{
             grid-template-columns: 350px 1fr;
@@ -274,62 +253,6 @@ main {
                 left: 49%;
             }
         }
-
-        // About page
-
-        .about-section{
-            padding: 18vw 25vw 2vw 25vw;
-        }
-
-        .tmdb-section{
-            padding: 0vw 25vw 10vw 25vw;
-        }
-
-        article {
-            margin-bottom: 0;
-        }
-    
-        img{
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-            filter: brightness(85%);
-        }
-    
-    }
-
-    
-    @media (min-width: 1000px){
-
-        // Home
-        
-        .movie-cards {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-         // Favourites
-
-        .movie-cards-favourites {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-    }
-
-
-    @media (min-width: 1400px){
-
-        // Home
-            
-        .movie-cards {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        // Favourites
-        .movie-cards-favourites {
-            grid-template-columns: repeat(4, 1fr);
-            margin-top: 0;
-        }
-
-    }
+   }
 
 }
