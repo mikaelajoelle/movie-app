@@ -5,14 +5,7 @@
 
 main {
 
-    // All images
-
-    img{ 
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        filter: brightness(85%);
-    }
+ 
     
     // ========================================================================
     // Home
@@ -24,6 +17,14 @@ main {
         grid-template-rows: 1fr;
         grid-gap: 2em;
         padding: 5vw;
+   
+
+        img{ 
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            filter: brightness(85%);
+        }
    }
 
    @media (min-width: 720px){
@@ -161,6 +162,7 @@ main {
    // ========================================================================
    // Single Page
    // ========================================================================
+
 
    .single-movie-card{
        margin: 50px 30px 70px 30px;

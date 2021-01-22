@@ -4,8 +4,8 @@
 @use '../utilities/functions' as *;
 
    .search-bar{
-    display: none;
-}
+        display: none;
+    }
 
     .search-poster,
     .placeholder-search-poster{
@@ -28,6 +28,10 @@
         ul{
             display: flex;
             padding: 0;
+        }
+
+        li{
+            list-style: none;
         }
 
     }
