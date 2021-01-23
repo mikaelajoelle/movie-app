@@ -163,13 +163,19 @@ main {
    // Single Page
    // ========================================================================
 
+   .banner-img-single{
+    filter: brightness(25%);
+    position: fixed;
+   }
+   
 
    .single-movie-card{
        margin: 50px 30px 70px 30px;
-       background-color: rgb(24, 24, 24);
+       background-color: rgba(0, 0, 0, 0.585);
        padding: 30px;
        border-radius: 20px;
        position: relative;
+       top: 30px;
        display: grid;
        grid-template-columns: 1fr;
        grid-gap: 3em;
@@ -247,8 +253,9 @@ main {
             grid-template-columns: 350px 1fr;
             width: 700px;
             margin: 0 auto;
-            margin-top: 13vw;
-            margin-bottom: 8vw;
+            top: 12vw;
+           // margin-top: 13vw;
+            margin-bottom: 22vw;
 
             .single-movie-rating{
                 top: 7%;
