@@ -71,7 +71,7 @@ const MoviePage = () => {
                 <div className="banner">
                 { movieObj.banner == null ?
                     <div className="unavailable-banner">
-                        <img className="placeholder-banner" src={placeholderBannerImage} alt="Placeholder banner image"/>
+                        <img className="banner-img-single" src={placeholderBannerImage} alt="Placeholder banner image"/>
                     </div>
                     : 
                     <div className="available-banner">

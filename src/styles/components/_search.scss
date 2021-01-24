@@ -10,7 +10,7 @@
     .search-poster,
     .placeholder-search-poster{
         width: 150px;
-        height: auto;
+        height: 225px;
     }
 
     .search-results-list{
@@ -19,7 +19,7 @@
     }
 
     .result-list{
-        padding-top: 10vw;
+        padding-top: 9vw;
         width: 100%;
         position: absolute;
         z-index: 2;
@@ -34,6 +34,15 @@
             list-style: none;
         }
 
+    }
+
+    .search-rating{
+        border-radius: 20%;
+        border: 1px solid $borderColor;
+        background: transparent;
+        text-align: center;
+        line-height: 28px;
+        width: 35px;
     }
 
 @media (min-width: 1000px){

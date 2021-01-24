@@ -8,6 +8,10 @@
     display: none;
 } 
 
+.banner img{
+    filter: brightness(25%);
+}
+
 @media (min-width: 720px){
 
 
@@ -25,7 +29,7 @@
         }
 
         .banner img{
-            filter: brightness(25%);
+            object-fit: cover;
             height: 100vh;
         }
 

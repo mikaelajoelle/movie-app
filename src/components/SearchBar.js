@@ -60,7 +60,7 @@ const Search = () => {
       let movies = data.results.slice(0, 5).map((movie)=>{
           
           return(
-            <Link to={`/${movie.id}`} onClick={resetInput} >
+            <Link to={`/${movie.id}`} style={{textDecoration: 'none'}} onClick={resetInput} >
             
               <li>
                 <div className="search-results-list">
@@ -78,7 +78,7 @@ const Search = () => {
                   <div className="search-info">
                     <p className="search-title">{movie.title}</p>
                     <p>{formatDate(movie.release_date)}</p>
-                    <p>{movie.vote_average}</p>
+                    <p class="search-rating">{movie.vote_average}</p>
                   </div>
                 </div>
                 
