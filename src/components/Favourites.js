@@ -12,6 +12,12 @@ const Favourites = () => {
     const faveArray = JSON.parse(movies);
     const [ifFaved, setIfFaved] = useState([]);
 
+     // Convert release date
+     function formatDate(string){
+        let options = { year: 'numeric', month: 'long', day: 'numeric' };
+        return new Date(string).toLocaleDateString([],options);
+    }
+
 
     const addMovie = () => {
         if(!isItemInStorage(movies)){
@@ -44,15 +50,15 @@ const Favourites = () => {
                         }
                         <div className="content">
                             <h2>{fave.title}</h2>
-                            <h5>{fave.date}</h5>
-                                <div className="rating"><h3>{fave.rating}</h3></div>
-                                <p className="movie-description">{fave.summary}</p>
-                                <div className="button-container">
-                                    <Link to={`/${fave.id}`}><button className="movie-button">More Info</button></Link>
-                                    
-                                </div>
+                            <h4>{formatDate(fave.date)}</h4>
+                            <div className="rating"><h3>{fave.rating}</h3></div>
+                            <p className="movie-description">{fave.summary}</p>
+                            <div className="button-container">
+                                <Link to={`/${fave.id}`}><button className="movie-button">More Info</button></Link>
+                                
+                            </div>
 
-                                {isItemInStorage(fave) ? <button className="unfave-button" onClick={removeMovie}>Remove from Favourites</button> : 
+                        {isItemInStorage(fave) ? <button className="unfave-button" onClick={removeMovie}>Remove from Favourites</button> : 
                         <button className="unfave-button" onClick={addMovie}>Add to Favourites</button>}
                         </div>
                     </div>

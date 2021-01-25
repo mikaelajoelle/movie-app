@@ -91,29 +91,29 @@ const MoviePage = () => {
                     </Link>
                     
                         <div className="single-movie-info">
-                            <h5>{formatDate(movieObj.date)}</h5>
-                            <h5>{movieObj.runtime} minutes</h5>
+                            <h4>{formatDate(movieObj.date)}</h4>
+                            <h4>{movieObj.runtime} minutes</h4>
                         </div>
-                            <h2>{movieObj.title}</h2>
-                            <div className="single-movie-rating"><h3>{movieObj.rating}</h3></div>
-                            <p className="movie-description-full">{movieObj.summary}</p>  
+                        <h2>{movieObj.title}</h2>
+                        <div className="single-movie-rating"><h3>{movieObj.rating}</h3></div>
+                        <p className="movie-description-full">{movieObj.summary}</p>  
 
-                            <div className="details-info">
-                                <h5>Genres:
-                                {movieObj.genres.length === 0  ?
-                                    <span className="no-genre">N/A</span>
-                                    :
-                                    <span className="genre-tag">{
-                                        movie.genres.map(genre=>genre.name).length>1?
-                                        movie.genres.map(genre=>genre.name).join(", "): 
-                                        movie.genres.map(genre=>genre.name)
-                                        }</span>
-                                }
-                                </h5>
-                            </div>
+                        <div className="details-info">
+                            <h5>Genres:
+                            {movieObj.genres.length === 0  ?
+                                <span className="no-genre">N/A</span>
+                                :
+                                <span className="genre-tag">{
+                                    movie.genres.map(genre=>genre.name).length>1?
+                                    movie.genres.map(genre=>genre.name).join(", "): 
+                                    movie.genres.map(genre=>genre.name)
+                                    }</span>
+                            }
+                            </h5>
+                        </div>
 
                         {isItemInStorage(movie) ? <button className="movie-button" onClick={removeMovie}>Remove from Favourites</button> : 
-                            <button className="movie-button" onClick={addMovie}>Add to Favourites</button>}
+                        <button className="movie-button" onClick={addMovie}>Add to Favourites</button>}
                             
 
                     </div>

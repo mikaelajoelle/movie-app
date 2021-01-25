@@ -31,13 +31,14 @@ const MovieGrid = (props) => {
                         }
                         <div className="content">
                             <h2>{movie.title}</h2>
-                            <h5>{formatDate(movie.release_date)}</h5>
-                                <div className="rating"><h3>{movie.vote_average}</h3></div>
-                                <p className="movie-description">{movie.overview}</p>
+                          
+                            <div className="rating"><h3>{movie.vote_average}</h3></div>
+                            <h4>{formatDate(movie.release_date)}</h4>
+                            <p className="movie-description">{movie.overview}</p>
                                
-                                <div className="button-container">
-                                    <Link to={`/${movie.id}`}><button className="movie-button">More Info</button></Link>
-                                </div>
+                            <div className="button-container">
+                                <Link to={`/${movie.id}`}><button className="movie-button">More Info</button></Link>
+                            </div>
                         </div>
                     </div>
                 </div>

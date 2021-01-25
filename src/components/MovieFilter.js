@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {NavLink} from 'react-router-dom';
 
-class TitleFilter extends React.Component  {
+class MovieFilter extends React.Component  {
 
     
     render() {
@@ -21,4 +21,4 @@ class TitleFilter extends React.Component  {
     }  
 };
 
-export default TitleFilter;
+export default MovieFilter;

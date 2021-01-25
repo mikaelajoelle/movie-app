@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import MovieGrid from './MovieGrid';
 import SearchBar from './SearchBar';
 import Banner from './Banner';
-import TitleFilter from './TitleFilter';
+import MovieFilter from './MovieFilter';
 import {API_KEY} from '../globals/variables';
 
 const MainSection = ({ sort }) => {
@@ -39,7 +39,7 @@ const MainSection = ({ sort }) => {
             <section>
             { banner != null && <Banner banner = {banner} />}
                 <SearchBar />
-                <TitleFilter/>
+                <MovieFilter/>
                 
                 { movies != null && <MovieGrid movies = {movies} />}
             </section>
