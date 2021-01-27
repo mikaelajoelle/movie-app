@@ -169,7 +169,7 @@ main {
    }
 
    .single-movie-container{
-       padding: 0;
+       padding-bottom: 20px;
    }
 
    .single-movie-card{
@@ -181,7 +181,7 @@ main {
        top: 30px;
        display: grid;
        grid-template-columns: 1fr;
-       grid-gap: 3em;
+       grid-gap: 2em;
 
        .no-genre{
            margin-left: 5px;
@@ -264,7 +264,7 @@ main {
             width: 700px;
             margin: 0 auto;
             top: 12vw;
-           // margin-top: 13vw;
+            grid-gap: 3rem;
             margin-bottom: 22vw;
 
             .single-movie-rating{
