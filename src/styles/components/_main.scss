@@ -169,7 +169,7 @@ main {
    }
 
    .single-movie-container{
-       padding: 0 0 50px 0;
+       padding: 0;
    }
 
    .single-movie-card{
@@ -193,12 +193,12 @@ main {
            border: 1px solid $borderColor;
            width: 150px;
            color: $grey;
+           position: relative;
            left: 75%;
-           top: 36%;
+           top: 12%;
        }
 
-       .movie-button:hover,
-       .movie-button:active{
+       .movie-button:hover{
             background-color: $pink;
             color: white;
             border: 1px solid $pink;
@@ -273,6 +273,7 @@ main {
             }
 
             .movie-button{
+                position: absolute;
                 left: 45%;
                 top: 86%;
             }
