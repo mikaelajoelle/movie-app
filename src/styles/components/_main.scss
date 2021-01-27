@@ -222,6 +222,7 @@ main {
 
        .single-movie-info{
            display: flex;
+           margin-top: 10px;
 
            h5{
                margin-right: 25px;
@@ -271,6 +272,10 @@ main {
             .single-movie-rating{
                 top: 0;
                 left: 86%;
+            }
+
+            .single-movie-info{
+                margin-top: 0;
             }
 
             .movie-button{
