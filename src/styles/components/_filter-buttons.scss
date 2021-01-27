@@ -5,12 +5,12 @@
 
 
 .top-bar{
-    padding: 6.5vw 4vw 0vw 4vw;
+    padding: 6.5vw 5vw 0vw 5vw;
     display: flex;
     justify-content: space-between;
 
     @media (min-width: 475px){
-        padding: 5vw 4vw 0vw 4vw;
+        padding: 5vw 5vw 0vw 5vw;
     }
 }
 
@@ -90,6 +90,10 @@ a.current-filter{
 
      .filter-buttons{
          margin: 0;
+     }
+
+     .top-bar{
+        padding: 5vw 4vw 0vw 4vw;
      }
      
  }
