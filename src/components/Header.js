@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 import Nav from './Nav';
 
 
-
 const Header = () => {
 
     const [navOpen, setNavOpen] = useState(false);

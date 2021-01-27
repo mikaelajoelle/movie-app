@@ -41,7 +41,6 @@ const Banner = (props) => {
                             
                         </div>
                     </div>
-                   
                 </div>
         )});
     }

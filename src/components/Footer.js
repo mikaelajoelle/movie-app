@@ -1,3 +1,5 @@
+// Footer
+
 import { getYear } from '../utilities/utilities';
 import { NavLink } from 'react-router-dom';
 
