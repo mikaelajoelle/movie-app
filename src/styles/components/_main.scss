@@ -169,7 +169,8 @@ main {
    }
 
    .single-movie-container{
-       padding-bottom: 20px;
+       padding-bottom: 50px;
+       position: relative;
    }
 
    .single-movie-card{
@@ -188,14 +189,14 @@ main {
        }
 
        .movie-button{
-           margin: 0;
+           margin: 0 0 20px 0;
            background-color: transparent;
            border: 1px solid $borderColor;
            width: 150px;
            color: $grey;
-           position: relative;
+           position: absolute;
            left: 75%;
-           top: 12%;
+           top: 95%;
        }
 
        .movie-button:hover{
@@ -206,8 +207,8 @@ main {
 
        .single-movie-rating{
            position: absolute;
-           top: 2.4%;
-           left: 82%;
+           top: 0;
+           left: 86%;
            width: 48px;
            height:38px;
            pointer-events: none;
@@ -268,14 +269,14 @@ main {
             margin-bottom: 22vw;
 
             .single-movie-rating{
-                top: 7%;
-                left: 49%;
+                top: 0;
+                left: 86%;
             }
 
             .movie-button{
                 position: absolute;
-                left: 45%;
-                top: 86%;
+                left: 78%;
+                top: 93%;
             }
 
             .single-movie-container{
