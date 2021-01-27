@@ -5,9 +5,13 @@
 
 
 .top-bar{
-    padding: 4vw 4vw 0vw 4vw;
+    padding: 6.5vw 4vw 0vw 4vw;
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: 475px){
+        padding: 5vw 4vw 0vw 4vw;
+    }
 }
 
 .filter-button{
@@ -17,10 +21,11 @@
 
 .filter-buttons{
     z-index: 2;
+    width: 100%;
     display: grid;
-    grid-template-columns: 110px 110px;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 50px 50px;
-    
+    grid-gap: 0.3em;
     margin: 0 auto;
 
     @media (min-width: 475px){
@@ -36,9 +41,8 @@
     text-align: center;
     color: $grey;
     padding: 14px;
-    margin: 5px 8px;
-    width: 92px;
     font-size: 0.7em;
+    width: 100%;
 
      &:hover,
      &:active,
@@ -47,6 +51,11 @@
          border: 1px solid $pink;
          color: white;
      }
+
+     @media (min-width: 475px){
+        width: 98px;
+        margin: 5px 4px;
+    }
 }
 
 a.current-filter{
