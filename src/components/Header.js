@@ -29,7 +29,7 @@ const Header = () => {
 
     return (
         <header className={navOpen ? 'show' : undefined}>
-           <NavLink className="logo-link" to={'/'}><img src={process.env.PUBLIC_URL + '/favicon.png'} alt="dbl feature logo"/></NavLink>
+           <NavLink className="logo-link" to={'/'}><img src={process.env.PUBLIC_URL + '/dbl-logo.png'} alt="dbl feature logo"/></NavLink>
             {/**
              * HTML for the Hamburger icon modified from HTMl 
              * found at this codepen:

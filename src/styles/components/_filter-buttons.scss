@@ -41,6 +41,7 @@
     font-size: 0.7em;
 
      &:hover,
+     &:active,
      &:focus{
          background-color: $pink;
          border: 1px solid $pink;

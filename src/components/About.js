@@ -9,7 +9,7 @@ function About() {
       
       <section class="about-section">
       <h2>Welcome to Double Feature!</h2>
-      <p>The Double Feature movie database is a website where users can find popular, trending, upcoming and now playing movie listings. 
+      <p>The Double Feature movie database is a website where users can find popular, top rated, now playing and upcoming movie listings. 
         Browse for your favourite genres or movies, check out their ratings and see how they match up! </p>
         <p>Found something you like? Add them to your <Link className="favourites-link" to="/Favourites"> favourites</Link> and remove any item anytime.</p>
       </section>

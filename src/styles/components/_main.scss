@@ -4,8 +4,6 @@
 @use '../utilities/functions' as *;
 
 main {
-
- 
     
     // ========================================================================
     // Home
@@ -16,7 +14,7 @@ main {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: 1fr;
         grid-gap: 2em;
-        padding: 5vw;
+        padding: 6vw;
    
 
         img{ 
@@ -131,9 +129,11 @@ main {
 
         .favourites-link{
             color: #d4d3d3;
+            text-decoration: none;
         }
 
-        .favourites-link:hover{
+        .favourites-link:hover,
+        .favourites-link:active{
             border-bottom: 1px solid $pink;
         }
    }
@@ -197,7 +197,8 @@ main {
            top: 36%;
        }
 
-       .movie-button:hover{
+       .movie-button:hover,
+       .movie-button:active{
             background-color: $pink;
             color: white;
             border: 1px solid $pink;
@@ -243,7 +244,8 @@ main {
         margin-bottom: 1.5rem;
        }
 
-       .back-button:hover{
+       .back-button:hover,
+       .back-button:active{
         filter: invert(48%) sepia(100%) saturate(8476%) hue-rotate(327deg) brightness(100%) contrast(115%);
        }
 

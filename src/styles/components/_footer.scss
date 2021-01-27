@@ -46,7 +46,8 @@ footer{
 
     }
 
-    .footer-link:hover, .help-link:hover{
+    .footer-link:hover, .help-link:hover,
+    .footer-link:active, .help-link:active{
         border-bottom: 1px solid $pink;
     }
 
