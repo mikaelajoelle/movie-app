@@ -32,7 +32,7 @@ const MovieGrid = (props) => {
                         <div className="content">
                             <h2>{movie.title}</h2>
                           
-                            <div className="rating"><h3>{movie.vote_average}</h3></div>
+                            <div className="rating"><h3>{movie.vote_average.toFixed(1)}</h3></div>
                             <h4>{formatDate(movie.release_date)}</h4>
                             <p className="movie-description">{movie.overview}</p>
                                

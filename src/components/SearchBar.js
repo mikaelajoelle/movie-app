@@ -78,7 +78,7 @@ const Search = () => {
                   <div className="search-info">
                     <p className="search-title">{movie.title}</p>
                     <p>{formatDate(movie.release_date)}</p>
-                    <p class="search-rating">{movie.vote_average}</p>
+                    <p class="search-rating">{movie.vote_average.toFixed(1)}</p>
                   </div>
                 </div>
                 

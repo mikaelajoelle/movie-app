@@ -29,7 +29,7 @@ const Banner = (props) => {
                             </div>
                         }
                         <div className="text-overlay" id="right-text-overlay">
-                            <p>{banner.vote_average}</p>
+                            <p>{banner.vote_average.toFixed(1)}</p>
                             <div className="button-container">
                                     <Link to={`/${banner.id}`}><button className="banner-button">More Info</button></Link>
                             </div>
