@@ -52,7 +52,7 @@ const MoviePage = () => {
             title: obj.title,
             runtime: obj.runtime,
             date: obj.release_date,
-            rating: obj.vote_average,
+            rating: obj.vote_average.toFixed(1),
             summary: obj.overview,
             img: obj.poster_path,
             id: obj.id,
